@@ -18,7 +18,7 @@ public class CustomerAccountDao {
 	EntityManager em = null;
 	
 	//for adding
-	public void saveGuest(CustomerAccount customerAccount){
+	public void saveCustomerAccount(CustomerAccount customerAccount){
 		emf = databaseHelper.provideFactory();
 		em = emf.createEntityManager();
 		em.getTransaction().begin();

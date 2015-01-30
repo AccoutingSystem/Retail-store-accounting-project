@@ -20,7 +20,7 @@ public class CustomerDao {
 	EntityManager em = null;
 	
 	//for adding
-	public void saveGuest(Customer customer){
+	public void saveCustomer(Customer customer){
 		emf = databaseHelper.provideFactory();
 		em = emf.createEntityManager();
 		em.getTransaction().begin();
