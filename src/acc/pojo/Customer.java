@@ -8,9 +8,10 @@ package acc.pojo;
 public class Customer {
 	@Id
 	@GeneratedValue
+	
 	@Column(name = "CustomerID")
 	private int custID;
-	
+	//instance variables
 	@Column(name = "CustomerName")
 	private String custName;
 	
