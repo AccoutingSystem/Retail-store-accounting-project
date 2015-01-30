@@ -3,7 +3,7 @@ package acc.pojo;
  * 
  * When are we meeeting guys
  * */
-@Entity
+@Entity //creating entity kebo
 @Table(name = "Customer")
 public class Customer {
 	@Id
