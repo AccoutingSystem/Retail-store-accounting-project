@@ -8,53 +8,72 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /*
  * 
  * When are we meeeting guys
  * */
+@XmlRootElement
 @Entity
 @Table(name = "Customer")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Customer 
 {
+	@XmlAttribute
 	@Id
 	@GeneratedValue
 	@Column(name = "CustomerID")
 	private int custID;
 	
+	@XmlAttribute
 	@Column(name = "CustomerName")
 	private String custName;
 	
+	@XmlAttribute
 	@Column(name = "CustomerSurname")
 	private String custSurname;
 
+	@XmlAttribute
 	@Column(name = "CustomerAddress")
 	private String custAddress;
 	
+	@XmlAttribute
 	@Column(name = "ContactNr")
 	private String contactNr;
 
+	@XmlAttribute
 	@Column(name = "Occupation")
 	private String occupation;
 
+	@XmlAttribute
 	@Column(name = "Gender")
 	private String gender;
 	
+	@XmlAttribute
 	@Column(name = "IdentityNr")
 	private long idNr;
 
+	@XmlAttribute
 	@Column(name = "Income")
 	private double income;
 
+	@XmlAttribute
 	@Column(name = "MonthlyExpences")
 	private double monthlyExpenses;
 
+	@XmlAttribute
 	@Column(name = "BranchCode")
 	private int branchCode;
 
+	@XmlAttribute
 	@Column(name = "BankName")
 	private String bankName;
 
+	@XmlAttribute
 	@Column(name = "Email")
 	private String email;
 	
