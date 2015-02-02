@@ -37,12 +37,12 @@ public class CustomerRest {
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	
-	/*public void update(@PathParam("CustomerID")int custId,@PathParam("CustomerName") 
+	/*public void update(@PathParam("CustomerID")long custId,@PathParam("CustomerName") 
     String custName,@PathParam("CustomerSurname") String custSurname,
     @PathParam("CustomerAddress")String custAddress,@PathParam("ContactNr") 
     String contactNr,@PathParam("Occupation") String occupation,@PathParam("Gender") 
 	String gender,@PathParam("IdentityNr") String idNr,@PathParam("Income") String income,@PathParam("MonthlyExpences") String monthlyExpenses,
-	@PathParam("BranchCode") String  branchCode,@PathParam("BankName") String bankName,@PathParam("E-mail") String email) {
+	@PathParam("BranchCode") long  branchCode,@PathParam("BankName") String bankName,@PathParam("E-mail") String email) {
 	*/
 	//not sure wich 1 works best
 	public void update(@QueryParam("CustomerID") int custId,@QueryParam("CustomerName") 
@@ -50,7 +50,7 @@ public class CustomerRest {
     @QueryParam("CustomerAddress")String custAddress,@QueryParam("ContactNr") 
     String contactNr,@QueryParam("Occupation") String occupation,@QueryParam("Gender") 
 	String gender,@QueryParam("IdentityNr") long idNr,@QueryParam("Income") double income,@QueryParam("MonthlyExpences") double monthlyExpenses,
-	@QueryParam("BranchCode") int  branchCode,@QueryParam("BankName") String bankName,@QueryParam("E-mail") String email) {
+	@QueryParam("BranchCode") long branchCode,@QueryParam("BankName") String bankName,@QueryParam("E-mail") String email) {
 		
 		
 		dao = new CustomerDao();
