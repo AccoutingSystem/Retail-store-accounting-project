@@ -1,9 +1,12 @@
 package acc.pojo;
 
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -20,6 +23,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "Employee")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Employee {
+	
 	@XmlAttribute
 	@Id
 	@GeneratedValue
@@ -94,14 +98,12 @@ public class Employee {
 	@JoinColumn(name = "PayrollNumber")
 	private PayrolExpenses payrolls;
 	
-	@OneToMany()
-	@JoinColumn(name = "StoreAccNr")
-	private StoreAccountsPayable storeAccounts;
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "accPayable")	
+	private List<StoreAccountsPayable> accountsPayable;
+		
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "storeSalesRec")
+	private List<StoreSalesRecord> storeSalesRec;
 	
-	@OneToMany()
-	@JoinColumn(name = "")
-	private StoreSalesRecord storeSalesRec;
-
 	public Employee() {
 		super();
 	}
@@ -111,8 +113,9 @@ public class Employee {
 			long idNumber, String gender, String race, String email,
 			String password, String taxNumber, String qualification,
 			long empAccNr, long brachCode, String branchName,
-			PayrolExpenses payrolls, StoreAccountsPayable storeAccounts,
-			StoreSalesRecord storeSalesRec) {
+			PayrolExpenses payrolls,
+			List<StoreAccountsPayable> accountsPayable,
+			List<StoreSalesRecord> storeSalesRec) {
 		super();
 		this.empName = empName;
 		this.empSurname = empSurname;
@@ -131,169 +134,209 @@ public class Employee {
 		this.brachCode = brachCode;
 		BranchName = branchName;
 		this.payrolls = payrolls;
-		this.storeAccounts = storeAccounts;
+		this.accountsPayable = accountsPayable;
 		this.storeSalesRec = storeSalesRec;
 	}
+
 
 	public long getEmpID() {
 		return empID;
 	}
 
+
 	public void setEmpID(long empID) {
 		this.empID = empID;
 	}
+
 
 	public String getEmpName() {
 		return empName;
 	}
 
+
 	public void setEmpName(String empName) {
 		this.empName = empName;
 	}
+
 
 	public String getEmpSurname() {
 		return empSurname;
 	}
 
+
 	public void setEmpSurname(String empSurname) {
 		this.empSurname = empSurname;
 	}
+
 
 	public String getEmpAddress() {
 		return empAddress;
 	}
 
+
 	public void setEmpAddress(String empAddress) {
 		this.empAddress = empAddress;
 	}
+
 
 	public String getEmpContactNr() {
 		return empContactNr;
 	}
 
+
 	public void setEmpContactNr(String empContactNr) {
 		this.empContactNr = empContactNr;
 	}
+
 
 	public String getJobTitle() {
 		return jobTitle;
 	}
 
+
 	public void setJobTitle(String jobTitle) {
 		this.jobTitle = jobTitle;
 	}
+
 
 	public Date getStartDate() {
 		return startDate;
 	}
 
+
 	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
 	}
+
 
 	public long getIdNumber() {
 		return idNumber;
 	}
 
+
 	public void setIdNumber(long idNumber) {
 		this.idNumber = idNumber;
 	}
+
 
 	public String getGender() {
 		return gender;
 	}
 
+
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+
 
 	public String getRace() {
 		return race;
 	}
 
+
 	public void setRace(String race) {
 		this.race = race;
 	}
+
 
 	public String getEmail() {
 		return email;
 	}
 
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
 
 	public String getPassword() {
 		return password;
 	}
 
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 
 	public String getTaxNumber() {
 		return taxNumber;
 	}
 
+
 	public void setTaxNumber(String taxNumber) {
 		this.taxNumber = taxNumber;
 	}
+
 
 	public String getQualification() {
 		return qualification;
 	}
 
+
 	public void setQualification(String qualification) {
 		this.qualification = qualification;
 	}
+
 
 	public long getEmpAccNr() {
 		return empAccNr;
 	}
 
+
 	public void setEmpAccNr(long empAccNr) {
 		this.empAccNr = empAccNr;
 	}
+
 
 	public long getBrachCode() {
 		return brachCode;
 	}
 
+
 	public void setBrachCode(long brachCode) {
 		this.brachCode = brachCode;
 	}
+
 
 	public String getBranchName() {
 		return BranchName;
 	}
 
+
 	public void setBranchName(String branchName) {
 		BranchName = branchName;
 	}
+
 
 	public PayrolExpenses getPayrolls() {
 		return payrolls;
 	}
 
+
 	public void setPayrolls(PayrolExpenses payrolls) {
 		this.payrolls = payrolls;
 	}
 
-	public StoreAccountsPayable getStoreAccounts() {
-		return storeAccounts;
+
+	public List<StoreAccountsPayable> getAccountsPayable() {
+		return accountsPayable;
 	}
 
-	public void setStoreAccounts(StoreAccountsPayable storeAccounts) {
-		this.storeAccounts = storeAccounts;
+
+	public void setAccountsPayable(List<StoreAccountsPayable> accountsPayable) {
+		this.accountsPayable = accountsPayable;
 	}
 
-	public StoreSalesRecord getStoreSalesRec() {
+
+	public List<StoreSalesRecord> getStoreSalesRec() {
 		return storeSalesRec;
 	}
 
-	public void setStoreSalesRec(StoreSalesRecord storeSalesRec) {
+
+	public void setStoreSalesRec(List<StoreSalesRecord> storeSalesRec) {
 		this.storeSalesRec = storeSalesRec;
 	}
-	
+
 	
 }
