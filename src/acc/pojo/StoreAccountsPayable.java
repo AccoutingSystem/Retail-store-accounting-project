@@ -1,11 +1,10 @@
 package acc.pojo;
 
-import java.util.Date;
 
-@Entity
-@Table(name = "CustomerPayments")
+
+
 public class StoreAccountsPayable {
-
+/*
 	@Id
 	@GeneratedValue
 	@Column(name = "AccPayableID")

@@ -51,11 +51,11 @@ public class CustomerAccountDao {
 		em=emf.createEntityManager();
 		em.getTransaction().begin();
 		CustomerAccount customerAccount=em.find(CustomerAccount.class,accId);
-		customerAccount.setCustbalance(custbalance );
-		customerAccount.setInstallment( installment);
-		customerAccount.setCustCredit(custCredit);
+		customerAccount.setCustbalance(accId);
+		customerAccount.setInstallment(accId);
+		customerAccount.setCustCredit(accId);
 		customerAccount.setDate(date);
-		customerAccount.setInterestRate(interestRate);
+		customerAccount.setInterestRate(accId);
 		customerAccount.setCustomer(customer);
 		em.getTransaction().commit();
 		em.close();

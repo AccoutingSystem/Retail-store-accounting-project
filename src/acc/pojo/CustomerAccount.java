@@ -1,62 +1,82 @@
 package acc.pojo;
 
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
 
+
+
+@XmlRootElement
 @Entity
-@Table(name = "Account")
+@Table(name = "CustomerAccount")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class CustomerAccount {
 	
+	@XmlAttribute
 	@Id
 	@GeneratedValue
 	@Column(name = "AccountID")
-	private int accID;
+   // @GenericGenerator(name="gen", strategy="foreign", parameters=@Parameter(name="property", value="customer"))
+	private long accID;
 	
+	@XmlAttribute
 	@Column(name = "CustomerBalance")
-	private String custbalance;
+	private double custbalance;
 
+	@XmlAttribute
 	@Column(name = "Installment")
-	private String installment;
+	private double installment;
 
+	@XmlAttribute
 	@Column(name = "Credit")
-	private String custCredit;
+	private double custCredit;
 
+	@XmlAttribute
 	@Column(name = "Date")
 	private Date date;
 
+	@XmlAttribute
 	@Column(name = "InterestRate")
-	private String interestRate;
+	private double interestRate;
 	
-	//@Column(name = "CustomerID")
-	@OneToOne()
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "cusAccount")	
+	private List<AccountPayment> accountsPaid;
+	
+	@OneToOne
 	@PrimaryKeyJoinColumn
 	private Customer customer;
 	
-
 	public CustomerAccount() {
 		super();
 	}
-
-	public CustomerAccount(String custbalance, String installment,
-			String custCredit, Date date, String interestRate) {
+	
+	public CustomerAccount(double custbalance, double installment,
+			double custCredit, Date date, double interestRate) {
 		super();
-		
+
 		this.custbalance = custbalance;
 		this.installment = installment;
 		this.custCredit = custCredit;
 		this.date = date;
 		this.interestRate = interestRate;
 	}
-
-	public CustomerAccount( String custbalance, String installment,
-			String custCredit, Date date, String interestRate, Customer customer) {
+	
+	public CustomerAccount( double custbalance, double installment,
+			double custCredit, Date date, double interestRate, Customer customer) {
 		super();
 		
 		this.custbalance = custbalance;
@@ -67,32 +87,43 @@ public class CustomerAccount {
 		this.customer = customer;
 	}
 
-	public String getCustbalance() {
+
+	public long getAccID() {
+		return accID;
+	}
+
+
+	public void setAccID(long accID) {
+		this.accID = accID;
+	}
+
+
+	public double getCustbalance() {
 		return custbalance;
 	}
 
 
-	public void setCustbalance(String custbalance) {
+	public void setCustbalance(double custbalance) {
 		this.custbalance = custbalance;
 	}
 
 
-	public String getInstallment() {
+	public double getInstallment() {
 		return installment;
 	}
 
 
-	public void setInstallment(String installment) {
+	public void setInstallment(double installment) {
 		this.installment = installment;
 	}
 
 
-	public String getCustCredit() {
+	public double getCustCredit() {
 		return custCredit;
 	}
 
 
-	public void setCustCredit(String custCredit) {
+	public void setCustCredit(double custCredit) {
 		this.custCredit = custCredit;
 	}
 
@@ -107,12 +138,12 @@ public class CustomerAccount {
 	}
 
 
-	public String getInterestRate() {
+	public double getInterestRate() {
 		return interestRate;
 	}
 
 
-	public void setInterestRate(String interestRate) {
+	public void setInterestRate(double interestRate) {
 		this.interestRate = interestRate;
 	}
 
@@ -125,7 +156,7 @@ public class CustomerAccount {
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
-	
-	
 
+	
 }
+

@@ -49,13 +49,14 @@ public class CustomerRest {
     String custName,@QueryParam("CustomerSurname") String custSurname,
     @QueryParam("CustomerAddress")String custAddress,@QueryParam("ContactNr") 
     String contactNr,@QueryParam("Occupation") String occupation,@QueryParam("Gender") 
-	String gender,@QueryParam("IdentityNr") String idNr,@QueryParam("Income") String income,@QueryParam("MonthlyExpences") String monthlyExpenses,
-	@QueryParam("BranchCode") String  branchCode,@QueryParam("BankName") String bankName,@QueryParam("E-mail") String email) {
+	String gender,@QueryParam("IdentityNr") long idNr,@QueryParam("Income") double income,@QueryParam("MonthlyExpences") double monthlyExpenses,
+	@QueryParam("BranchCode") int  branchCode,@QueryParam("BankName") String bankName,@QueryParam("E-mail") String email) {
 		
 		
 		dao = new CustomerDao();
 		dao.update(custId, custName,custSurname,custAddress, contactNr,occupation,gender,idNr,income,monthlyExpenses,branchCode,bankName,email);
 	}
+	
 	
 	//for deleting
 	

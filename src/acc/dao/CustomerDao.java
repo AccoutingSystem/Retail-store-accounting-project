@@ -49,7 +49,7 @@ public class CustomerDao {
 	//for updating
 	public void update( int custId,String custName, String custSurname,
 			String custAddress, String contactNr, String occupation, String gender,
-			String idNr, String income, String monthlyExpenses, String branchCode,
+			long idNr, double income, double monthlyExpenses, int branchCode,
 			String bankName, String email) {
 		emf=databaseHelper.provideFactory();
 		em=emf.createEntityManager();
@@ -61,7 +61,7 @@ public class CustomerDao {
 		customer.setContactNr(contactNr);
 		customer.setOccupation(occupation);
 		customer.setGender(gender);
-		customer.setIdNr(idNr);
+		customer.setIdNr(idNr);;
 		customer.setIncome(income);
 		customer.setEmail(email);
 		customer.setMonthlyExpenses(monthlyExpenses);

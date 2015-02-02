@@ -41,27 +41,26 @@ public class Customer
 	private String gender;
 	
 	@Column(name = "IdentityNr")
-	private String idNr;
+	private long idNr;
 
 	@Column(name = "Income")
-	private String income;
+	private double income;
 
 	@Column(name = "MonthlyExpences")
-	private String monthlyExpenses;
+	private double monthlyExpenses;
 
 	@Column(name = "BranchCode")
-	private String branchCode;
+	private int branchCode;
 
 	@Column(name = "BankName")
 	private String bankName;
 
-	@Column(name = "E-mail")
+	@Column(name = "Email")
 	private String email;
 	
 	//@Column(name = "AccountNr")
 	@OneToOne(fetch = FetchType.LAZY, mappedBy = "customer", cascade = CascadeType.ALL)
 	private CustomerAccount custAccount;
-
 	
 public Customer() {
 	super();
@@ -69,7 +68,7 @@ public Customer() {
 
 public Customer( String custName, String custSurname,
 		String custAddress, String contactNr, String occupation, String gender,
-		String idNr, String income, String monthlyExpenses, String branchCode,
+		int i, double d, double e, int j,
 		String bankName, String email) {
 	super();
 	
@@ -79,165 +78,124 @@ public Customer( String custName, String custSurname,
 	this.contactNr = contactNr;
 	this.occupation = occupation;
 	this.gender = gender;
-	this.idNr = idNr;
-	this.income = income;
-	this.monthlyExpenses = monthlyExpenses;
-	this.branchCode = branchCode;
+	this.idNr = i;
+	this.income = d;
+	this.monthlyExpenses = e;
+	this.branchCode = j;
 	this.bankName = bankName;
 	this.email = email;
 }
 
-
-public Customer( String custName, String custSurname,
-		String custAddress, String contactNr, String occupation, String gender,
-		String idNr, String income, String monthlyExpenses, String branchCode,
-		String bankName, String email, CustomerAccount custAccount) {
-	super();
-	this.custName = custName;
-	this.custSurname = custSurname;
-	this.custAddress = custAddress;
-	this.contactNr = contactNr;
-	this.occupation = occupation;
-	this.gender = gender;
-	this.idNr = idNr;
-	this.income = income;
-	this.monthlyExpenses = monthlyExpenses;
-	this.branchCode = branchCode;
-	this.bankName = bankName;
-	this.email = email;
-	this.custAccount = custAccount;
+public int getCustID() {
+	return custID;
 }
 
+public void setCustID(int custID) {
+	this.custID = custID;
+}
 
 public String getCustName() {
 	return custName;
 }
 
-
 public void setCustName(String custName) {
 	this.custName = custName;
 }
-
 
 public String getCustSurname() {
 	return custSurname;
 }
 
-
 public void setCustSurname(String custSurname) {
 	this.custSurname = custSurname;
 }
-
 
 public String getCustAddress() {
 	return custAddress;
 }
 
-
 public void setCustAddress(String custAddress) {
 	this.custAddress = custAddress;
 }
-
 
 public String getContactNr() {
 	return contactNr;
 }
 
-
 public void setContactNr(String contactNr) {
 	this.contactNr = contactNr;
 }
-
 
 public String getOccupation() {
 	return occupation;
 }
 
-
 public void setOccupation(String occupation) {
 	this.occupation = occupation;
 }
-
 
 public String getGender() {
 	return gender;
 }
 
-
 public void setGender(String gender) {
 	this.gender = gender;
 }
 
-
-public String getIdNr() {
+public long getIdNr() {
 	return idNr;
 }
 
-
-public void setIdNr(String idNr) {
+public void setIdNr(long idNr) {
 	this.idNr = idNr;
 }
 
-
-public String getIncome() {
+public double getIncome() {
 	return income;
 }
 
-
-public void setIncome(String income) {
+public void setIncome(double income) {
 	this.income = income;
 }
 
-
-public String getMonthlyExpenses() {
+public double getMonthlyExpenses() {
 	return monthlyExpenses;
 }
 
-
-public void setMonthlyExpenses(String monthlyExpenses) {
+public void setMonthlyExpenses(double monthlyExpenses) {
 	this.monthlyExpenses = monthlyExpenses;
 }
 
-
-public String getBranchCode() {
+public int getBranchCode() {
 	return branchCode;
 }
 
-
-public void setBranchCode(String branchCode) {
+public void setBranchCode(int branchCode) {
 	this.branchCode = branchCode;
 }
-
 
 public String getBankName() {
 	return bankName;
 }
 
-
 public void setBankName(String bankName) {
 	this.bankName = bankName;
 }
-
 
 public String getEmail() {
 	return email;
 }
 
-
 public void setEmail(String email) {
 	this.email = email;
 }
-
 
 public CustomerAccount getCustAccount() {
 	return custAccount;
 }
 
-
 public void setCustAccount(CustomerAccount custAccount) {
 	this.custAccount = custAccount;
 }
-
-	
 
 }
