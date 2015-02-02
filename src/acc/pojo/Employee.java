@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "Employee")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Employee {
+
 	
 	@XmlAttribute
 	@Id
@@ -338,5 +339,4 @@ public class Employee {
 		this.storeSalesRec = storeSalesRec;
 	}
 
-	
 }
