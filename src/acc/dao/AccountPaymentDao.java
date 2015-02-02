@@ -1,6 +1,5 @@
 package acc.dao;
 
-
 import java.util.Date;
 import java.util.List;
 
@@ -10,14 +9,16 @@ import javax.persistence.TypedQuery;
 
 import Helper.databaseHelper;
 import acc.pojo.AccountPayment;
+import acc.pojo.CustomerAccount;
 import acc.pojo.CustomerPayments;
-public class CustomerPaymentsDao {
+
+public class AccountPaymentDao {
 	
 	EntityManagerFactory emf = null;
 	EntityManager em = null;
 	
 	//for adding
-	public void saveCustomerPayments(CustomerPayments payments){
+	public void saveAccountPayments(AccountPayment payments){
 		emf = databaseHelper.provideFactory();
 		em = emf.createEntityManager();
 		em.getTransaction().begin();
@@ -25,45 +26,57 @@ public class CustomerPaymentsDao {
 		em.getTransaction().commit();
 		em.close();
 	}
-	public CustomerPayments search(long paymentId){
+	public AccountPayment search(long  accPaymentId){
 		emf=databaseHelper.provideFactory();
 		em=emf.createEntityManager();
 		em.getTransaction().begin();
-		CustomerPayments payments=em.find(CustomerPayments.class,paymentId);
+		AccountPayment payments=em.find(AccountPayment.class, accPaymentId);
 		return payments;
 	}
 	//for deleting
-	public void remove(long paymentId){
+	public void remove(long  accPaymentId){
 		emf=databaseHelper.provideFactory();
 		em=emf.createEntityManager();
 		em.getTransaction().begin();
-		CustomerPayments payments=em.find(CustomerPayments.class,paymentId);
+		AccountPayment payments=em.find(AccountPayment.class, accPaymentId);
 		em.remove(payments);
 		em.getTransaction().commit();
 		em.close();
 	}
 	
 	//for updating
-	public void update( long paymentId ,Date date, List<AccountPayment> accountsPaid) {
+	public void update(long accPaymentId,double amount,CustomerAccount cusAccount, CustomerPayments cusPayment) {
 		emf=databaseHelper.provideFactory();
 		em=emf.createEntityManager();
 		em.getTransaction().begin();
-		CustomerPayments payments=em.find(CustomerPayments.class,paymentId);
-		payments.setDate(date);
-		payments.setAccountsPaid(accountsPaid);
-		
+		AccountPayment payments=em.find(AccountPayment.class,accPaymentId);
+		payments.setAmount(amount);
+		payments.setCusPayment(cusPayment);
+		payments.setCusAccount(cusAccount);
 		em.getTransaction().commit();
 		em.close();
 	}
 
 	//for displaying
-		public List<CustomerPayments>listCustomerPayments(){
+		public List<AccountPayment>listAccountPayments(){
         emf=databaseHelper.provideFactory();
         em=emf.createEntityManager();
-        TypedQuery<CustomerPayments> query=em.createQuery("Select b from CustomerPayments p",CustomerPayments.class);
-        List<CustomerPayments> results=query.getResultList();
+        TypedQuery<AccountPayment> query=em.createQuery("Select b from AccountPayment a",AccountPayment.class);
+        List<AccountPayment> results=query.getResultList();
         return results;
     }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
