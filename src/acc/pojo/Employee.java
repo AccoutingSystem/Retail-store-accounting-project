@@ -99,10 +99,10 @@ public class Employee {
 	@JoinColumn(name = "PayrollNumber")
 	private PayrolExpenses payrolls;
 	
-	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "accPayable")	
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "empPaid")	
 	private List<StoreAccountsPayable> accountsPayable;
 		
-	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "storeSalesRec")
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "empSalesRec")
 	private List<StoreSalesRecord> storeSalesRec;
 	
 	public Employee() {
