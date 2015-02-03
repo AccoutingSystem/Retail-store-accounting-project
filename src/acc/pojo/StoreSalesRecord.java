@@ -55,15 +55,46 @@ public class StoreSalesRecord
 		this.employee = employee;
 		this.sales = sales;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
+	public long getSalesRecNr() {
+		return salesRecNr;
+	}
+
+	public void setSalesRecNr(long salesRecNr) {
+		this.salesRecNr = salesRecNr;
+	}
+
+	public double getDeptSalesAmounts() {
+		return deptSalesAmounts;
+	}
+
+	public void setDeptSalesAmounts(double deptSalesAmounts) {
+		this.deptSalesAmounts = deptSalesAmounts;
+	}
+
+	public Date getSalesRecDate() {
+		return salesRecDate;
+	}
+
+	public void setSalesRecDate(Date salesRecDate) {
+		this.salesRecDate = salesRecDate;
+	}
+
+	public Employee getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+
+	public Sales getSales() {
+		return sales;
+	}
+
+	public void setSales(Sales sales) {
+		this.sales = sales;
+	}
+	
+	
 }

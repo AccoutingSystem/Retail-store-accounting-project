@@ -27,7 +27,7 @@ public class Customer
 	@Id
 	@GeneratedValue
 	@Column(name = "CustomerID")
-	private long custID;
+	private int custID;
 	
 	@XmlAttribute
 	@Column(name = "CustomerName")
@@ -67,7 +67,7 @@ public class Customer
 
 	@XmlAttribute
 	@Column(name = "BranchCode")
-	private long branchCode;
+	private int branchCode;
 
 	@XmlAttribute
 	@Column(name = "BankName")
