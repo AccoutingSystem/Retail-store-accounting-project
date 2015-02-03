@@ -45,12 +45,12 @@ public class CustomerRest {
 	@PathParam("BranchCode") String  branchCode,@PathParam("BankName") String bankName,@PathParam("E-mail") String email) {
 	*/
 	//not sure wich 1 works best
-	public void update(@QueryParam("CustomerID") int custId,@QueryParam("CustomerName") 
+	public void update(@QueryParam("CustomerID") long custId,@QueryParam("CustomerName") 
     String custName,@QueryParam("CustomerSurname") String custSurname,
     @QueryParam("CustomerAddress")String custAddress,@QueryParam("ContactNr") 
     String contactNr,@QueryParam("Occupation") String occupation,@QueryParam("Gender") 
 	String gender,@QueryParam("IdentityNr") long idNr,@QueryParam("Income") double income,@QueryParam("MonthlyExpences") double monthlyExpenses,
-	@QueryParam("BranchCode") int  branchCode,@QueryParam("BankName") String bankName,@QueryParam("E-mail") String email) {
+	@QueryParam("BranchCode") long  branchCode,@QueryParam("BankName") String bankName,@QueryParam("E-mail") String email) {
 		
 		
 		dao = new CustomerDao();

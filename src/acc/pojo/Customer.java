@@ -67,7 +67,7 @@ public class Customer
 
 	@XmlAttribute
 	@Column(name = "BranchCode")
-	private int branchCode;
+	private long branchCode;
 
 	@XmlAttribute
 	@Column(name = "BankName")
@@ -87,7 +87,7 @@ public Customer() {
 
 public Customer( String custName, String custSurname,
 		String custAddress, String contactNr, String occupation, String gender,
-		int i, double d, double e, int j,
+		long idNr, double income, double monthlyExpenses, long branchCode,
 		String bankName, String email) {
 	super();
 	
@@ -97,10 +97,10 @@ public Customer( String custName, String custSurname,
 	this.contactNr = contactNr;
 	this.occupation = occupation;
 	this.gender = gender;
-	this.idNr = i;
-	this.income = d;
-	this.monthlyExpenses = e;
-	this.branchCode = j;
+	this.idNr = idNr;
+	this.income = income;
+	this.monthlyExpenses = monthlyExpenses;
+	this.branchCode = branchCode;
 	this.bankName = bankName;
 	this.email = email;
 }
@@ -185,11 +185,11 @@ public void setMonthlyExpenses(double monthlyExpenses) {
 	this.monthlyExpenses = monthlyExpenses;
 }
 
-public int getBranchCode() {
+public long getBranchCode() {
 	return branchCode;
 }
 
-public void setBranchCode(int branchCode) {
+public void setBranchCode(long branchCode) {
 	this.branchCode = branchCode;
 }
 

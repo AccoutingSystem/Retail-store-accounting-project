@@ -18,15 +18,5 @@ public class databaseHelper {
 	public static EntityManagerFactory provideFactory(){	
 		return entityManagerFactory;	
 	}
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }
