@@ -27,12 +27,15 @@ public class StoreAccountsPayable {
 	@Column(name = "AccPayableID")
 	private long accPaymentID;
 	
+	@XmlAttribute
 	@Column(name = "AccountType")
 	private String accType;
 	
-	@Column(name = "Amount")
-	private double amount;
+	@XmlAttribute
+	@Column(name = "PayableAmount")
+	private double payableAmount;
 	
+	@XmlAttribute
 	@Column(name = "PaymentDate")
 	private Date paymentDate;
 	
@@ -52,7 +55,7 @@ public class StoreAccountsPayable {
 			double amount, Date paymentDate, Employee empPaid) {
 		super();
 		this.accType = accType;
-		this.amount = amount;
+		this.payableAmount = amount;
 		this.paymentDate = paymentDate;
 		this.empPaid = empPaid;
 	}
@@ -89,14 +92,14 @@ public class StoreAccountsPayable {
 	 * @return the amount
 	 */
 	public double getAmount() {
-		return amount;
+		return payableAmount;
 	}
 
 	/**
 	 * @param amount the amount to set
 	 */
 	public void setAmount(double amount) {
-		this.amount = amount;
+		this.payableAmount = amount;
 	}
 
 	/**
