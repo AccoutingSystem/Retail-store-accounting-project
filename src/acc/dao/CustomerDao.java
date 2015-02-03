@@ -47,9 +47,9 @@ public class CustomerDao {
 	}
 	
 	//for updating
-	public void update( long custId,String custName, String custSurname,
+	public void update( int custId,String custName, String custSurname,
 			String custAddress, String contactNr, String occupation, String gender,
-			long idNr, double income, double monthlyExpenses, long branchCode,
+			long idNr, double income, double monthlyExpenses, int branchCode,
 			String bankName, String email) {
 		emf=databaseHelper.provideFactory();
 		em=emf.createEntityManager();
