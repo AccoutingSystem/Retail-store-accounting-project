@@ -17,7 +17,7 @@ import javax.ws.rs.core.MediaType;
 import acc.dao.CustomerAccountDao;
 import acc.pojo.Customer;
 import acc.pojo.CustomerAccount;
-
+@Path("/CustomerAccounts")
 public class CustomerAccountRest {
 	
 	CustomerAccountDao dao =null;
