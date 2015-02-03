@@ -27,7 +27,7 @@ public class Customer
 	@Id
 	@GeneratedValue
 	@Column(name = "CustomerID")
-	private int custID;
+	private long custID;
 	
 	@XmlAttribute
 	@Column(name = "CustomerName")
@@ -105,11 +105,11 @@ public Customer( String custName, String custSurname,
 	this.email = email;
 }
 
-public int getCustID() {
+public long getCustID() {
 	return custID;
 }
 
-public void setCustID(int custID) {
+public void setCustID(long custID) {
 	this.custID = custID;
 }
 
@@ -216,5 +216,7 @@ public CustomerAccount getCustAccount() {
 public void setCustAccount(CustomerAccount custAccount) {
 	this.custAccount = custAccount;
 }
+
+
 
 }
