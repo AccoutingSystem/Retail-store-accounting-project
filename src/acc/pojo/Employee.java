@@ -105,6 +105,9 @@ public class Employee {
 	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "empSalesRec")
 	private List<StoreSalesRecord> storeSalesRec;
 	
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "employees")
+	private List<SupplierPayment> supplierPayments;
+	
 	public Employee() {
 		super();
 	}
@@ -116,7 +119,8 @@ public class Employee {
 			long empAccNr, long brachCode, String branchName,
 			PayrolExpenses payrolls,
 			List<StoreAccountsPayable> accountsPayable,
-			List<StoreSalesRecord> storeSalesRec) {
+			List<StoreSalesRecord> storeSalesRec,
+			List<SupplierPayment> supplierPayments) {
 		super();
 		this.empName = empName;
 		this.empSurname = empSurname;
@@ -137,206 +141,301 @@ public class Employee {
 		this.payrolls = payrolls;
 		this.accountsPayable = accountsPayable;
 		this.storeSalesRec = storeSalesRec;
+		this.supplierPayments = supplierPayments;
 	}
 
-
+	/**
+	 * @return the empID
+	 */
 	public long getEmpID() {
 		return empID;
 	}
 
-
+	/**
+	 * @param empID the empID to set
+	 */
 	public void setEmpID(long empID) {
 		this.empID = empID;
 	}
 
-
+	/**
+	 * @return the empName
+	 */
 	public String getEmpName() {
 		return empName;
 	}
 
-
+	/**
+	 * @param empName the empName to set
+	 */
 	public void setEmpName(String empName) {
 		this.empName = empName;
 	}
 
-
+	/**
+	 * @return the empSurname
+	 */
 	public String getEmpSurname() {
 		return empSurname;
 	}
 
-
+	/**
+	 * @param empSurname the empSurname to set
+	 */
 	public void setEmpSurname(String empSurname) {
 		this.empSurname = empSurname;
 	}
 
-
+	/**
+	 * @return the empAddress
+	 */
 	public String getEmpAddress() {
 		return empAddress;
 	}
 
-
+	/**
+	 * @param empAddress the empAddress to set
+	 */
 	public void setEmpAddress(String empAddress) {
 		this.empAddress = empAddress;
 	}
 
-
+	/**
+	 * @return the empContactNr
+	 */
 	public String getEmpContactNr() {
 		return empContactNr;
 	}
 
-
+	/**
+	 * @param empContactNr the empContactNr to set
+	 */
 	public void setEmpContactNr(String empContactNr) {
 		this.empContactNr = empContactNr;
 	}
 
-
+	/**
+	 * @return the jobTitle
+	 */
 	public String getJobTitle() {
 		return jobTitle;
 	}
 
-
+	/**
+	 * @param jobTitle the jobTitle to set
+	 */
 	public void setJobTitle(String jobTitle) {
 		this.jobTitle = jobTitle;
 	}
 
-
+	/**
+	 * @return the startDate
+	 */
 	public Date getStartDate() {
 		return startDate;
 	}
 
-
+	/**
+	 * @param startDate the startDate to set
+	 */
 	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
 	}
 
-
+	/**
+	 * @return the idNumber
+	 */
 	public long getIdNumber() {
 		return idNumber;
 	}
 
-
+	/**
+	 * @param idNumber the idNumber to set
+	 */
 	public void setIdNumber(long idNumber) {
 		this.idNumber = idNumber;
 	}
 
-
+	/**
+	 * @return the gender
+	 */
 	public String getGender() {
 		return gender;
 	}
 
-
+	/**
+	 * @param gender the gender to set
+	 */
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
 
-
+	/**
+	 * @return the race
+	 */
 	public String getRace() {
 		return race;
 	}
 
-
+	/**
+	 * @param race the race to set
+	 */
 	public void setRace(String race) {
 		this.race = race;
 	}
 
-
+	/**
+	 * @return the email
+	 */
 	public String getEmail() {
 		return email;
 	}
 
-
+	/**
+	 * @param email the email to set
+	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
-
+	/**
+	 * @return the password
+	 */
 	public String getPassword() {
 		return password;
 	}
 
-
+	/**
+	 * @param password the password to set
+	 */
 	public void setPassword(String password) {
 		this.password = password;
 	}
 
-
+	/**
+	 * @return the taxNumber
+	 */
 	public String getTaxNumber() {
 		return taxNumber;
 	}
 
-
+	/**
+	 * @param taxNumber the taxNumber to set
+	 */
 	public void setTaxNumber(String taxNumber) {
 		this.taxNumber = taxNumber;
 	}
 
-
+	/**
+	 * @return the qualification
+	 */
 	public String getQualification() {
 		return qualification;
 	}
 
-
+	/**
+	 * @param qualification the qualification to set
+	 */
 	public void setQualification(String qualification) {
 		this.qualification = qualification;
 	}
 
-
+	/**
+	 * @return the empAccNr
+	 */
 	public long getEmpAccNr() {
 		return empAccNr;
 	}
 
-
+	/**
+	 * @param empAccNr the empAccNr to set
+	 */
 	public void setEmpAccNr(long empAccNr) {
 		this.empAccNr = empAccNr;
 	}
 
-
+	/**
+	 * @return the brachCode
+	 */
 	public long getBrachCode() {
 		return brachCode;
 	}
 
-
+	/**
+	 * @param brachCode the brachCode to set
+	 */
 	public void setBrachCode(long brachCode) {
 		this.brachCode = brachCode;
 	}
 
-
+	/**
+	 * @return the branchName
+	 */
 	public String getBranchName() {
 		return BranchName;
 	}
 
-
+	/**
+	 * @param branchName the branchName to set
+	 */
 	public void setBranchName(String branchName) {
 		BranchName = branchName;
 	}
 
-
+	/**
+	 * @return the payrolls
+	 */
 	public PayrolExpenses getPayrolls() {
 		return payrolls;
 	}
 
-
+	/**
+	 * @param payrolls the payrolls to set
+	 */
 	public void setPayrolls(PayrolExpenses payrolls) {
 		this.payrolls = payrolls;
 	}
 
-
+	/**
+	 * @return the accountsPayable
+	 */
 	public List<StoreAccountsPayable> getAccountsPayable() {
 		return accountsPayable;
 	}
 
-
+	/**
+	 * @param accountsPayable the accountsPayable to set
+	 */
 	public void setAccountsPayable(List<StoreAccountsPayable> accountsPayable) {
 		this.accountsPayable = accountsPayable;
 	}
 
-
+	/**
+	 * @return the storeSalesRec
+	 */
 	public List<StoreSalesRecord> getStoreSalesRec() {
 		return storeSalesRec;
 	}
 
-
+	/**
+	 * @param storeSalesRec the storeSalesRec to set
+	 */
 	public void setStoreSalesRec(List<StoreSalesRecord> storeSalesRec) {
 		this.storeSalesRec = storeSalesRec;
+	}
+
+	/**
+	 * @return the supplierPayments
+	 */
+	public List<SupplierPayment> getSupplierPayments() {
+		return supplierPayments;
+	}
+
+	/**
+	 * @param supplierPayments the supplierPayments to set
+	 */
+	public void setSupplierPayments(List<SupplierPayment> supplierPayments) {
+		this.supplierPayments = supplierPayments;
 	}
 
 }

@@ -32,14 +32,6 @@ public class SupplierPayment {
 	private Date paymentDate;
 	
 	@XmlAttribute
-	@Column(name = "ServiceRendered")
-	private String serviceRendered;
-	
-	@XmlAttribute
-	@Column(name = "Quantity")
-	private String quantity;
-	
-	@XmlAttribute
 	@Column(name = "AmountPaid")
 	private double amountPaid;
 	
@@ -47,19 +39,21 @@ public class SupplierPayment {
 	@JoinColumn(name ="SupplierID")
 	private Suppliers supplier;
 
+	@ManyToOne()
+	@JoinColumn(name ="EmployeeID")
+	private Employee employees;	
+	
 	public SupplierPayment() {
 		super();
 	}
 
-	public SupplierPayment(Date paymentDate,
-			String serviceRendered, String quantity, double amountPaid,
-			Suppliers supplier) {
+	public SupplierPayment(Date paymentDate, double amountPaid,
+			Suppliers supplier, Employee employees) {
 		super();
 		this.paymentDate = paymentDate;
-		this.serviceRendered = serviceRendered;
-		this.quantity = quantity;
 		this.amountPaid = amountPaid;
 		this.supplier = supplier;
+		this.employees = employees;
 	}
 
 	/**
@@ -91,34 +85,6 @@ public class SupplierPayment {
 	}
 
 	/**
-	 * @return the serviceRendered
-	 */
-	public String getServiceRendered() {
-		return serviceRendered;
-	}
-
-	/**
-	 * @param serviceRendered the serviceRendered to set
-	 */
-	public void setServiceRendered(String serviceRendered) {
-		this.serviceRendered = serviceRendered;
-	}
-
-	/**
-	 * @return the quantity
-	 */
-	public String getQuantity() {
-		return quantity;
-	}
-
-	/**
-	 * @param quantity the quantity to set
-	 */
-	public void setQuantity(String quantity) {
-		this.quantity = quantity;
-	}
-
-	/**
 	 * @return the amountPaid
 	 */
 	public double getAmountPaid() {
@@ -145,8 +111,20 @@ public class SupplierPayment {
 	public void setSupplier(Suppliers supplier) {
 		this.supplier = supplier;
 	}
-	
-	
+
+	/**
+	 * @return the employees
+	 */
+	public Employee getEmployees() {
+		return employees;
+	}
+
+	/**
+	 * @param employees the employees to set
+	 */
+	public void setEmployees(Employee employees) {
+		this.employees = employees;
+	}
 	
 
 }

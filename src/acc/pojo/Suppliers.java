@@ -1,6 +1,5 @@
 package acc.pojo;
 
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -46,10 +45,6 @@ public class Suppliers {
 	private String supplAddress;
 	
 	@XmlAttribute
-	@Column(name = "StartDate")
-	private Date startDate;
-	
-	@XmlAttribute
 	@Column(name = "AccountNr")
 	private long supplAccNr;
 	
@@ -61,32 +56,31 @@ public class Suppliers {
 	@Column(name = "BankName")
 	private String bankName;
 	
-	@XmlAttribute
-	@Column(name = "StartDate")
-	private Date endDate;
-	
 	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "supplier")	
 	private List<SupplierPayment> supplierPayments;
-
+	
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "servicesOffered")	
+	private List<SupplierServices> supplierServices;
+	
 	public Suppliers() {
 		super();
 	}
 
 	public Suppliers(String supplName, String supplContactNr,
-			String supplEmail, String supplAddress, Date startDate,
-			long supplAccNr, long branchCode, String bankName, Date endDate,
-			List<SupplierPayment> supplierPayments) {
+			String supplEmail, String supplAddress, long supplAccNr,
+			long branchCode, String bankName,
+			List<SupplierPayment> supplierPayments,
+			List<SupplierServices> supplierServices) {
 		super();
 		this.supplName = supplName;
 		this.supplContactNr = supplContactNr;
 		this.supplEmail = supplEmail;
 		this.supplAddress = supplAddress;
-		this.startDate = startDate;
 		this.supplAccNr = supplAccNr;
 		this.branchCode = branchCode;
 		this.bankName = bankName;
-		this.endDate = endDate;
 		this.supplierPayments = supplierPayments;
+		this.supplierServices = supplierServices;
 	}
 
 	/**
@@ -160,20 +154,6 @@ public class Suppliers {
 	}
 
 	/**
-	 * @return the startDate
-	 */
-	public Date getStartDate() {
-		return startDate;
-	}
-
-	/**
-	 * @param startDate the startDate to set
-	 */
-	public void setStartDate(Date startDate) {
-		this.startDate = startDate;
-	}
-
-	/**
 	 * @return the supplAccNr
 	 */
 	public long getSupplAccNr() {
@@ -216,20 +196,6 @@ public class Suppliers {
 	}
 
 	/**
-	 * @return the endDate
-	 */
-	public Date getEndDate() {
-		return endDate;
-	}
-
-	/**
-	 * @param endDate the endDate to set
-	 */
-	public void setEndDate(Date endDate) {
-		this.endDate = endDate;
-	}
-
-	/**
 	 * @return the supplierPayments
 	 */
 	public List<SupplierPayment> getSupplierPayments() {
@@ -242,5 +208,20 @@ public class Suppliers {
 	public void setSupplierPayments(List<SupplierPayment> supplierPayments) {
 		this.supplierPayments = supplierPayments;
 	}
+
+	/**
+	 * @return the supplierServices
+	 */
+	public List<SupplierServices> getSupplierServices() {
+		return supplierServices;
+	}
+
+	/**
+	 * @param supplierServices the supplierServices to set
+	 */
+	public void setSupplierServices(List<SupplierServices> supplierServices) {
+		this.supplierServices = supplierServices;
+	}
+
 	
 }
