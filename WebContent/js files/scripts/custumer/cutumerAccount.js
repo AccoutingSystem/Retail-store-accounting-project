@@ -23,7 +23,7 @@ var custumerAccount = function(){
     {
         $.ajax({
             type: 'POST',
-            url: '',
+            url: 'http://localhost:8080/AccountingERPSystem/rest/CustomerAccounts/Save',
             data: ko.toJSON(custumerAcc),
             contentType: 'application/json',
             dataType: "json",
@@ -49,7 +49,7 @@ var custumerAccount = function(){
     self.deleteAccount = function() {
 
         $.ajax({
-            url: "http://localhost:8080/AccountingERPSystem/rest?idNr="+self.accID(),
+            url: "http://localhost:8080/AccountingERPSystem/rest/CustomerAccounts/AccountID?accID="+self.accID(),
             cache: false,
             type: 'DELETE',
             contentType: 'application/json; charset=utf-8',
@@ -68,7 +68,7 @@ var custumerAccount = function(){
     {
         $.ajax({
             type: 'POST',
-            url: "http://localhost:8080/AccountingERPSystem/rest?custbalance="+self.custbalance()+"&installment="+self.installment()+"&custCredit="+self.custCredit()+"&date="+self.date()+"&interestRate="+self.interestRate(),
+            url: "http://localhost:8080/AccountingERPSystem/rest/CustomerAccounts/AccountID?custbalance="+self.custbalance()+"&installment="+self.installment()+"&custCredit="+self.custCredit()+"&date="+self.date()+"&interestRate="+self.interestRate(),
             contentType: 'application/json',
             dataType: "json",
             success: function()
@@ -88,7 +88,7 @@ var custumerAccount = function(){
     {
         $.ajax({
             type: 'GET',
-            url: "http://localhost:8080/AccountingERPSystem/rest/",
+            url: "http://localhost:8080/AccountingERPSystem/rest/CustomerAccounts/Retrieve",
             contentType: 'application/json',
             dataType: "json",
             success: function(data)
