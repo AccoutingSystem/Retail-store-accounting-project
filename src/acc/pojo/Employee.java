@@ -102,7 +102,7 @@ public class Employee {
 	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "empPaid")	
 	private List<StoreAccountsPayable> accountsPayable;
 		
-	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "empSalesRec")
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "employee")
 	private List<StoreSalesRecord> storeSalesRec;
 	
 	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "employees")

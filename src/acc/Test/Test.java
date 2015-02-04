@@ -23,9 +23,8 @@ public class Test
 		//CustomerDAO dao = new CustomerDAO();
 		
 		Date date = new Date();
-		date.setMonth(1);;
+		date.setMonth(1);
 		
-	
 		Customer cust1 = new Customer("John","McRoy","25 Ben Street, Cape Town","021 569 2369","Developer",
 				"Female",1233456789,15000.00,5000.00,33550,"Capitec","kkk@gmail.com");
 		
@@ -34,7 +33,6 @@ public class Test
 		
 		Customer cust3 = new Customer("Boby","Love","Kenny Street, Kimberley","021 569 2369","Manager",
 				"Female",1233456789,15000.00,5000,35000,"Absa","wer@gmail.com");
-		
 		
 				
 		CustomerAccount cAccount1 = new CustomerAccount(10000.00,520,5000,date,0.15,cust1);

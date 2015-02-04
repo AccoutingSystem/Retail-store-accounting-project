@@ -19,6 +19,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @Table(name = "Suppliers")
 @XmlAccessorType(XmlAccessType.FIELD)
+
 public class Suppliers {
 	
 	@XmlAttribute
