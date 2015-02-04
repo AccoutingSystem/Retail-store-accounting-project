@@ -88,11 +88,11 @@ public class Employee {
 	private long empAccNr;
 
 	@XmlAttribute
-	@Column(name = "EmployeeName")
+	@Column(name = "BranchCode")
 	private long brachCode;
 
 	@XmlAttribute
-	@Column(name = "EmployeeName")
+	@Column(name = "BranchName")
 	private String BranchName;
 
 	@ManyToOne()
