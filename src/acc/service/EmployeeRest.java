@@ -59,7 +59,7 @@ public class EmployeeRest {
 		
 		
 		dao = new EmployeeDao();
-		dao.update(empId, empName,empSurname,empAddress,contactNr,jobTitle,startDate,idNr, gender,email,password, taxNumber,qualification, empAccNr, brachCode,branchName, payrolls,accountsPayable,storeSalesRec);
+		dao.update(empId,empName,empSurname,empAddress,contactNr,jobTitle,startDate,idNr, gender,email,password, taxNumber,qualification, empAccNr, brachCode,branchName, payrolls,accountsPayable,storeSalesRec);
 	}
 	
 	
