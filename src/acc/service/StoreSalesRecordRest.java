@@ -43,6 +43,7 @@ public class StoreSalesRecordRest {
 	double deptSalesAmounts,@PathParam("SalesRecordDate")Date salesRecDate ,
     @PathParam("EmployeeID")Employee employee,@PathParam("SalesID")Sales sales){
 	 * 
+	 * *
 	*/
 	
 	//not sure wich 1 works best

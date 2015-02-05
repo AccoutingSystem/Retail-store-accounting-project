@@ -45,7 +45,7 @@ public class StoreSalesRecordDao {
 		em.close();
 	}
 	
-	//for updating
+	//for updating *
 	public void update(long recordId,double deptSalesAmounts,
 			Date salesRecDate, Employee employee, Sales sales) {
 		emf=databaseHelper.provideFactory();
