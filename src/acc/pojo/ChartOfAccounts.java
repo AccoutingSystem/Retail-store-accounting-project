@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @Table(name = "tbl_ChartOfAccouts")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ChartOfAccouts {
+public class ChartOfAccounts {
  
  @XmlAttribute
  @Id
@@ -39,18 +39,18 @@ public class ChartOfAccouts {
  @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "charts")
  private List<AccountsReceivable> receivable;
 
- public ChartOfAccouts() {
+ public ChartOfAccounts() {
  
  }
 
-public ChartOfAccouts(long chartCode, String chartDescription, String chartType) {
+public ChartOfAccounts(long chartCode, String chartDescription, String chartType) {
 	super();
 	this.chartCode = chartCode;
 	this.chartDescription = chartDescription;
 	this.chartType = chartType;
 }
 
-public ChartOfAccouts(long chartCode, String chartDescription,
+public ChartOfAccounts(long chartCode, String chartDescription,
 		String chartType, List<AccountsPayable> payable,
 		List<AccountsReceivable> receivable) {
 	super();

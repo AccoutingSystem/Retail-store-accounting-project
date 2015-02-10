@@ -38,14 +38,14 @@ public class AccountsReceivable {
  
  @ManyToOne()
  @JoinColumn(name = "Chart_Code")
- private ChartOfAccouts charts;
+ private ChartOfAccounts charts;
 
  public AccountsReceivable() {
   super();
  }
 
  public AccountsReceivable(long folioNr, double amount,
-   Date receivablesDate, String receivableType, ChartOfAccouts charts) {
+   Date receivablesDate, String receivableType, ChartOfAccounts charts) {
 
   this.folioNr = folioNr;
   this.amount = amount;
@@ -113,14 +113,14 @@ public class AccountsReceivable {
  /**
   * @return the charts
   */
- public ChartOfAccouts getCharts() {
+ public ChartOfAccounts getCharts() {
   return charts;
  }
 
  /**
   * @param charts the charts to set
   */
- public void setCharts(ChartOfAccouts charts) {
+ public void setCharts(ChartOfAccounts charts) {
   this.charts = charts;
  }
  
