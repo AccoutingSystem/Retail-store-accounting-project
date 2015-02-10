@@ -61,7 +61,7 @@ public class Suppliers {
 	private List<SupplierPayment> supplierPayments;
 	
 	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "servicesOffered")	
-	private List<SupplierServices> supplierServices;
+	private List<String> supplierServices;
 	
 	public Suppliers() {
 		super();
@@ -71,7 +71,7 @@ public class Suppliers {
 			String supplEmail, String supplAddress, long supplAccNr,
 			long branchCode, String bankName,
 			List<SupplierPayment> supplierPayments,
-			List<SupplierServices> supplierServices) {
+			List<String> supplierServices) {
 		super();
 		this.supplName = supplName;
 		this.supplContactNr = supplContactNr;
@@ -213,14 +213,14 @@ public class Suppliers {
 	/**
 	 * @return the supplierServices
 	 */
-	public List<SupplierServices> getSupplierServices() {
+	public List<String> getSupplierServices() {
 		return supplierServices;
 	}
 
 	/**
 	 * @param supplierServices the supplierServices to set
 	 */
-	public void setSupplierServices(List<SupplierServices> supplierServices) {
+	public void setSupplierServices(List<String> supplierServices) {
 		this.supplierServices = supplierServices;
 	}
 
