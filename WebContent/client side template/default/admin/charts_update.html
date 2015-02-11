@@ -334,7 +334,8 @@
 			<div class="sidebarMenuWrapper">
 				<ul class="list-unstyled">
 					<li><a href="index.html?lang=en"><i
-							class=" icon-projector-screen-line"></i><span>Dashboard</span></a></li>
+							class=" icon-projector-screen-line"></i><span>Dashboard</span></a>
+					</li>
 					<li class="hasSubmenu"><a href="#" data-target="#menu-style"
 						data-toggle="collapse"><i class="icon-compose"></i><span>Menu</span></a>
 						<ul class="collapse" id="menu-style">
@@ -388,7 +389,7 @@
 							<li><a href="payable_search.html?lang=en&amp;top_style=inverse">Search Payable</a></li>
 							<li><a href="payable_update.html?lang=en&amp;sidebar_style=default">Update Payable</a></li>							
 						</ul></li>
-
+												
 					<li><a href="profile_resume.html?lang=en"><i
 							class="icon-user-1"></i><span>Profile / Resume</span></a></li>
 					<li><a href="pricing_tables.html?lang=en"><i
@@ -407,8 +408,7 @@
 	<!-- Content -->
 	<div id="content">
 		<div class="heading-buttons bg-white border-bottom innerAll">
-			<h1 class="content-heading padding-none pull-left">Payable
-				</h1>
+			<h1 class="content-heading padding-none pull-left">Chart Update</h1>
 			<div class="clearfix"></div>
 		</div>
 
@@ -418,59 +418,47 @@
 		<div class="widget-body">
 			<form class="form-horizontal" role="form">
 				<div class="form-group">
-					<label class="col-sm-2 control-label">INFORMATIONS</label>
+					<label class="col-sm-2 control-label">VIEW ALL CHARTS</label>
 
 				</div>
-				
-				<div class="form-group">
-						<label for="inputEmail3" class="col-sm-2 control-label">Amount</label>
-						<div class="col-sm-6">
-							<input type="text" class="form-control" id="inputEmail3"
-								placeholder="Amount">
-						</div>
-				</div>
-				
-				<div class="form-group">
-						<label for="text" class="col-sm-2 control-label">Date</label>
-						<div class="col-sm-6">
-							<div class="input-group date" id="datepicker2">
-    							<input class="form-control" type="text" value="14 February 2015" />
-    							<span class="input-group-addon"><i class="fa fa-th"></i></span>
-							</div>
 
-						</div>
+				<div class="form-group">
+					<label for="inputEmail3" class="col-sm-2 control-label">Chart
+						Code</label>
+					<div class="col-sm-6">
+						<input type="text" class="form-control" id="inputEmail3"
+							placeholder="Code">
 					</div>
-					
-					<!-- Date picker -->
-						
-						
-					<!-- End -->
-					
-					
-					
-					
-					
-					
+				</div>
 
 				<div class="form-group">
-						<label for="inputEmail3" class="col-sm-2 control-label">Chart Code</label>
-						<div class="col-sm-6">
-							<input type="text" class="form-control" id="inputEmail3"
-								placeholder="Code">
-						</div>
+					<label for="inputEmail3" class="col-sm-2 control-label">Chart
+						Description</label>
+					<div class="col-sm-6">
+						<input type="text" class="form-control" id="inputEmail3"
+							placeholder="Description">
+					</div>
 				</div>
-								
+
 				<div class="form-group">
-						<label for="inputEmail3" class="col-sm-2 control-label">Payable Type</label>
-						<div class="col-sm-6">
+					<label for="inputEmail3" class="col-sm-2 control-label">Chart
+						Type</label>
+					<!-- <div class="col-sm-6">
 							<input type="text" class="form-control" id="inputEmail3"
 								placeholder="Type">
-						</div>
+						</div> -->
+					<div class="col-md-3">
+						<select class="selectpicker col-md-6" data-style="btn-default">
+							<option>Receivable</option>
+							<option>Payable</option>
+						</select>
+					</div>
 				</div>
+
 
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
-						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="submit" class="btn btn-primary">Update</button>
 					</div>
 				</div>
 			</form>
