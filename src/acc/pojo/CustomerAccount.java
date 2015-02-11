@@ -1,4 +1,4 @@
-package acc.pojo;
+/*package acc.pojo;
 
 import java.util.Date;
 import java.util.List;
@@ -160,3 +160,4 @@ public class CustomerAccount {
 	
 }
 
+*/

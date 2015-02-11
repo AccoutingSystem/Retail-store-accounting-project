@@ -1,4 +1,4 @@
-package acc.pojo;
+/*package acc.pojo;
 
 import java.util.Date;
 
@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/*The class SupplierPayment */
+The class SupplierPayment 
 @XmlRootElement
 @Entity
 @Table(name = "SupplierPayment")
@@ -56,75 +56,76 @@ public class SupplierPayment {
 		this.employees = employees;
 	}
 
-	/**
+	*//**
 	 * @return the supplPaymentID
-	 */
+	 *//*
 	public long getSupplPaymentID() {
 		return supplPaymentID;
 	}
 
-	/**
+	*//**
 	 * @param supplPaymentID the supplPaymentID to set
-	 */
+	 *//*
 	public void setSupplPaymentID(long supplPaymentID) {
 		this.supplPaymentID = supplPaymentID;
 	}
 
-	/**
+	*//**
 	 * @return the paymentDate
-	 */
+	 *//*
 	public Date getPaymentDate() {
 		return paymentDate;
 	}
 
-	/**
+	*//**
 	 * @param paymentDate the paymentDate to set
-	 */
+	 *//*
 	public void setPaymentDate(Date paymentDate) {
 		this.paymentDate = paymentDate;
 	}
 
-	/**
+	*//**
 	 * @return the amountPaid
-	 */
+	 *//*
 	public double getAmountPaid() {
 		return amountPaid;
 	}
 
-	/**
+	*//**
 	 * @param amountPaid the amountPaid to set
-	 */
+	 *//*
 	public void setAmountPaid(double amountPaid) {
 		this.amountPaid = amountPaid;
 	}
 
-	/**
+	*//**
 	 * @return the supplier
-	 */
+	 *//*
 	public Suppliers getSupplier() {
 		return supplier;
 	}
 
-	/**
+	*//**
 	 * @param supplier the supplier to set
-	 */
+	 *//*
 	public void setSupplier(Suppliers supplier) {
 		this.supplier = supplier;
 	}
 
-	/**
+	*//**
 	 * @return the employees
-	 */
+	 *//*
 	public Employee getEmployees() {
 		return employees;
 	}
 
-	/**
+	*//**
 	 * @param employees the employees to set
-	 */
+	 *//*
 	public void setEmployees(Employee employees) {
 		this.employees = employees;
 	}
 	
 
 }
+*/

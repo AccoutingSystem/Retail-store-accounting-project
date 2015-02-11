@@ -37,7 +37,7 @@ public class AccountsPayable
  private String paymentType;
  
  @ManyToOne()
- @JoinColumn(name = "Chart_Number")
+ @JoinColumn(name = "Chart_Code")
  private ChartOfAccounts charts;
 
  public AccountsPayable() {

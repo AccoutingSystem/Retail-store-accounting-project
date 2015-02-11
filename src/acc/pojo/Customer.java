@@ -1,4 +1,4 @@
-package acc.pojo;
+/*package acc.pojo;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -13,10 +13,10 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/*
+
  * 
  * When are we meeeting guys
- * */
+ * 
 @XmlRootElement
 @Entity
 @Table(name = "Customer")
@@ -220,3 +220,4 @@ public void setCustAccount(CustomerAccount custAccount) {
 
 
 }
+*/

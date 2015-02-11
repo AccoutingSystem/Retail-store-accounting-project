@@ -1,4 +1,4 @@
-package acc.service;
+/*package acc.service;
 
 import java.util.Date;
 import java.util.List;
@@ -40,13 +40,13 @@ public class EmployeeRest {
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	
-	/*public void update(@PathParam("EmployeeID")int custId,@PathParam("CustomerName") 
+	public void update(@PathParam("EmployeeID")int custId,@PathParam("CustomerName") 
     String custName,@PathParam("CustomerSurname") String custSurname,
     @PathParam("CustomerAddress")String custAddress,@PathParam("ContactNr") 
     String contactNr,@PathParam("Occupation") String occupation,@PathParam("Gender") 
 	String gender,@PathParam("IdentityNr") String idNr,@PathParam("Income") String income,@PathParam("MonthlyExpences") String monthlyExpenses,
 	@PathParam("BranchCode") String  branchCode,@PathParam("BankName") String bankName,@PathParam("E-mail") String email) {
-	*/
+	
 	//not sure wich 1 works best
 	public void update(@QueryParam("EmployeeID") long empId,@QueryParam("EmployeeName") 
     String empName,@QueryParam("EmployeeSurname") String empSurname,
@@ -144,3 +144,4 @@ public class EmployeeRest {
 	
 
 }
+*/

@@ -1,4 +1,4 @@
-package acc.pojo;
+/*package acc.pojo;
 
 import java.util.Date;
 
@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/*The bridge table StoreAccountsPayable for Employee and StoreAccount tables*/
+The bridge table StoreAccountsPayable for Employee and StoreAccount tables
 @XmlRootElement
 @Entity
 @Table(name = "StoreAccountsPayable")
@@ -60,74 +60,75 @@ public class StoreAccountsPayable {
 		this.empPaid = empPaid;
 	}
 
-	/**
+	*//**
 	 * @return the accPaymentID
-	 */
+	 *//*
 	public long getAccPaymentID() {
 		return accPaymentID;
 	}
 
-	/**
+	*//**
 	 * @param accPaymentID the accPaymentID to set
-	 */
+	 *//*
 	public void setAccPaymentID(long accPaymentID) {
 		this.accPaymentID = accPaymentID;
 	}
 
-	/**
+	*//**
 	 * @return the accType
-	 */
+	 *//*
 	public String getAccType() {
 		return accType;
 	}
 
-	/**
+	*//**
 	 * @param accType the accType to set
-	 */
+	 *//*
 	public void setAccType(String accType) {
 		this.accType = accType;
 	}
 
-	/**
+	*//**
 	 * @return the amount
-	 */
+	 *//*
 	public double getAmount() {
 		return payableAmount;
 	}
 
-	/**
+	*//**
 	 * @param amount the amount to set
-	 */
+	 *//*
 	public void setAmount(double amount) {
 		this.payableAmount = amount;
 	}
 
-	/**
+	*//**
 	 * @return the paymentDate
-	 */
+	 *//*
 	public Date getPaymentDate() {
 		return paymentDate;
 	}
 
-	/**
+	*//**
 	 * @param paymentDate the paymentDate to set
-	 */
+	 *//*
 	public void setPaymentDate(Date paymentDate) {
 		this.paymentDate = paymentDate;
 	}
 
-	/**
+	*//**
 	 * @return the empPaid
-	 */
+	 *//*
 	public Employee getEmpPaid() {
 		return empPaid;
 	}
 
-	/**
+	*//**
 	 * @param empPaid the empPaid to set
-	 */
+	 *//*
 	public void setEmpPaid(Employee empPaid) {
 		this.empPaid = empPaid;
 	}
 	
 }
+*/

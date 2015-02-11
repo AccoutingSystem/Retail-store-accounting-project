@@ -1,4 +1,4 @@
-package acc.pojo;
+/*package acc.pojo;
 
 import java.util.List;
 
@@ -84,145 +84,146 @@ public class Suppliers {
 		this.supplierServices = supplierServices;
 	}
 
-	/**
+	*//**
 	 * @return the supplID
-	 */
+	 *//*
 	public long getSupplID() {
 		return supplID;
 	}
 
-	/**
+	*//**
 	 * @param supplID the supplID to set
-	 */
+	 *//*
 	public void setSupplID(long supplID) {
 		this.supplID = supplID;
 	}
 
-	/**
+	*//**
 	 * @return the supplName
-	 */
+	 *//*
 	public String getSupplName() {
 		return supplName;
 	}
 
-	/**
+	*//**
 	 * @param supplName the supplName to set
-	 */
+	 *//*
 	public void setSupplName(String supplName) {
 		this.supplName = supplName;
 	}
 
-	/**
+	*//**
 	 * @return the supplContactNr
-	 */
+	 *//*
 	public String getSupplContactNr() {
 		return supplContactNr;
 	}
 
-	/**
+	*//**
 	 * @param supplContactNr the supplContactNr to set
-	 */
+	 *//*
 	public void setSupplContactNr(String supplContactNr) {
 		this.supplContactNr = supplContactNr;
 	}
 
-	/**
+	*//**
 	 * @return the supplEmail
-	 */
+	 *//*
 	public String getSupplEmail() {
 		return supplEmail;
 	}
 
-	/**
+	*//**
 	 * @param supplEmail the supplEmail to set
-	 */
+	 *//*
 	public void setSupplEmail(String supplEmail) {
 		this.supplEmail = supplEmail;
 	}
 
-	/**
+	*//**
 	 * @return the supplAddress
-	 */
+	 *//*
 	public String getSupplAddress() {
 		return supplAddress;
 	}
 
-	/**
+	*//**
 	 * @param supplAddress the supplAddress to set
-	 */
+	 *//*
 	public void setSupplAddress(String supplAddress) {
 		this.supplAddress = supplAddress;
 	}
 
-	/**
+	*//**
 	 * @return the supplAccNr
-	 */
+	 *//*
 	public long getSupplAccNr() {
 		return supplAccNr;
 	}
 
-	/**
+	*//**
 	 * @param supplAccNr the supplAccNr to set
-	 */
+	 *//*
 	public void setSupplAccNr(long supplAccNr) {
 		this.supplAccNr = supplAccNr;
 	}
 
-	/**
+	*//**
 	 * @return the branchCode
-	 */
+	 *//*
 	public long getBranchCode() {
 		return branchCode;
 	}
 
-	/**
+	*//**
 	 * @param branchCode the branchCode to set
-	 */
+	 *//*
 	public void setBranchCode(long branchCode) {
 		this.branchCode = branchCode;
 	}
 
-	/**
+	*//**
 	 * @return the bankName
-	 */
+	 *//*
 	public String getBankName() {
 		return bankName;
 	}
 
-	/**
+	*//**
 	 * @param bankName the bankName to set
-	 */
+	 *//*
 	public void setBankName(String bankName) {
 		this.bankName = bankName;
 	}
 
-	/**
+	*//**
 	 * @return the supplierPayments
-	 */
+	 *//*
 	public List<SupplierPayment> getSupplierPayments() {
 		return supplierPayments;
 	}
 
-	/**
+	*//**
 	 * @param supplierPayments the supplierPayments to set
-	 */
+	 *//*
 	public void setSupplierPayments(List<SupplierPayment> supplierPayments) {
 		this.supplierPayments = supplierPayments;
 	}
 
-	/**
+	*//**
 	 * @return the supplierServices
-	 */
+	 *//*
 	public List<String> getSupplierServices() {
 		return supplierServices;
 	}
 
-	/**
+	*//**
 	 * @param supplierServices the supplierServices to set
-	 */
+	 *//*
 	public void setSupplierServices(List<String> supplierServices) {
 		this.supplierServices = supplierServices;
 	}
 
 	
 }
+*/

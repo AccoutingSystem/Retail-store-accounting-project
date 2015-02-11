@@ -1,4 +1,4 @@
-package acc.pojo;
+/*package acc.pojo;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/*The StoreAccount class*/
+The StoreAccount class
 @XmlRootElement
 @Entity
 @Table(name = "StoreAccount")
@@ -51,60 +51,61 @@ public class StoreAccount {
 		this.storeAccounts = storeAccounts;
 	}
 
-	/**
+	*//**
 	 * @return the storeAccID
-	 */
+	 *//*
 	public long getStoreAccID() {
 		return storeAccID;
 	}
 
-	/**
+	*//**
 	 * @param storeAccID the storeAccID to set
-	 */
+	 *//*
 	public void setStoreAccID(long storeAccID) {
 		this.storeAccID = storeAccID;
 	}
 
-	/**
+	*//**
 	 * @return the storeName
-	 */
+	 *//*
 	public String getStoreName() {
 		return storeName;
 	}
 
-	/**
+	*//**
 	 * @param storeName the storeName to set
-	 */
+	 *//*
 	public void setStoreName(String storeName) {
 		this.storeName = storeName;
 	}
 
-	/**
+	*//**
 	 * @return the initialPayment
-	 */
+	 *//*
 	public double getInitialPayment() {
 		return initialPayment;
 	}
 
-	/**
+	*//**
 	 * @param initialPayment the initialPayment to set
-	 */
+	 *//*
 	public void setInitialPayment(double initialPayment) {
 		this.initialPayment = initialPayment;
 	}
 
-	/**
+	*//**
 	 * @return the storeAccounts
-	 */
+	 *//*
 	public List<StoreAccountsPayable> getStoreAccounts() {
 		return storeAccounts;
 	}
 
-	/**
+	*//**
 	 * @param storeAccounts the storeAccounts to set
-	 */
+	 *//*
 	public void setStoreAccounts(List<StoreAccountsPayable> storeAccounts) {
 		this.storeAccounts = storeAccounts;
 	}
 
 }
+*/

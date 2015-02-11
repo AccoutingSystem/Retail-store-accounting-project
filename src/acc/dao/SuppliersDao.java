@@ -1,4 +1,4 @@
-package acc.dao;
+/*package acc.dao;
 
 import java.util.List;
 
@@ -102,3 +102,4 @@ public class SuppliersDao {
 	
 	
 }
+*/

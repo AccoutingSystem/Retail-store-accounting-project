@@ -1,4 +1,4 @@
-package acc.pojo;
+/*package acc.pojo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -88,3 +88,4 @@ public class AccountPayment {
 	
 	
 }
+*/

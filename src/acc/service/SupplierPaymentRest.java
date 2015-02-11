@@ -1,4 +1,4 @@
-package acc.service;
+/*package acc.service;
 
 import java.util.Date;
 import java.util.List;
@@ -40,10 +40,10 @@ public class SupplierPaymentRest {
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	
-	/*public void update(@PathParam("SupplierPaymentID")  long paymentId,@PathParam("PaymentDate") 
+	public void update(@PathParam("SupplierPaymentID")  long paymentId,@PathParam("PaymentDate") 
 	Date paymentDate,@PathParam("AmountPaid")double amountPaid ,
     @PathParam("SupplierID")Suppliers supplier,@PathParam("EmployeeID") Employee employees){
-	*/
+	
 	
 	//not sure wich 1 works best
 	public void update(@QueryParam("SupplierPaymentID")  long paymentId,@QueryParam("PaymentDate") 
@@ -131,3 +131,4 @@ public class SupplierPaymentRest {
 	
 
 }
+*/

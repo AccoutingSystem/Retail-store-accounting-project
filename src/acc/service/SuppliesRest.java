@@ -1,4 +1,4 @@
-package acc.service;
+/*package acc.service;
 
 import java.util.List;
 
@@ -39,12 +39,12 @@ public class SuppliesRest {
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	
-	/*public void update(@PathParam("SupplierID")long supplierId,@PathParam("SupplierName") String supplName,
+	public void update(@PathParam("SupplierID")long supplierId,@PathParam("SupplierName") String supplName,
 	@PathParam("ContactNr")String supplContactNr,@PathParam("Email")String supplEmail,@PathParam("Address")String supplAddress,
 	@PathParam("AccountNr") long supplAccNr,@PathParam("BrachCode")long branchCode,
 	@PathParam("BankName")String bankName,@PathParam("supplier")List<SupplierPayment> supplierPayments,@PathParam("servicesOffered")List<String> supplierServices) {
 		
-	*/	
+		
 	
 	
 	//not sure wich 1 works best
@@ -121,3 +121,4 @@ public class SuppliesRest {
 	
 
 }
+*/

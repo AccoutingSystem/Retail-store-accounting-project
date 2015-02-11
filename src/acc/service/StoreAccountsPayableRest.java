@@ -1,4 +1,4 @@
-package acc.service;
+/*package acc.service;
 
 import java.util.Date;
 import java.util.List;
@@ -38,10 +38,10 @@ public class StoreAccountsPayableRest {
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	
-	/*public void update(@PathParam("AccPayableID") long payablesId,@PathParam("AccountType") 
+	public void update(@PathParam("AccPayableID") long payablesId,@PathParam("AccountType") 
 	String accType,@PathParam("PayableAmount")double amount,@PathParam("PaymentDate")Date paymentDate,
 	@PathParam("EmployeeID")Employee empPaid){
-	*/
+	
 	
 	//not sure wich 1 works best
 	public void update(@QueryParam("AccPayableID") long payablesId,@QueryParam("AccountType") 
@@ -134,3 +134,4 @@ public class StoreAccountsPayableRest {
 	
 
 }
+*/

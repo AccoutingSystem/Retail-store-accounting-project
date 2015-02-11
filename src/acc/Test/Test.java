@@ -6,8 +6,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import acc.pojo.Customer;
-import acc.pojo.CustomerAccount;
+import acc.pojo.AccountsPayable;
+import acc.pojo.AccountsReceivable;
+import acc.pojo.ChartOfAccounts;
+/*import acc.pojo.Customer;
+import acc.pojo.CustomerAccount;*/
 
 
 public class Test 
@@ -25,7 +28,19 @@ public class Test
 		Date date = new Date();
 		date.setMonth(1);
 		
-		Customer cust1 = new Customer("John","McRoy","25 Ben Street, Cape Town","021 569 2369","Developer",
+		
+		
+		ChartOfAccounts charts = new ChartOfAccounts(333,"The detalils of accounts","Payable");
+		AccountsPayable accPay = new AccountsPayable(123,56.30,date,"Rent",charts);
+		AccountsReceivable accRec = new AccountsReceivable(222,96.32,date,"Municipality",charts);
+		
+		/*long chartCode, String chartDescription, String chartType)*/
+		
+		
+
+		
+		
+		/*Customer cust1 = new Customer("John","McRoy","25 Ben Street, Cape Town","021 569 2369","Developer",
 				"Female",1233456789,15000.00,5000.00,33550,"Capitec","kkk@gmail.com");
 		
 		Customer cust2 = new Customer("Kebo","Moreng","15 Lol Street, Johannesburg","011 253 5632","Cashier",
@@ -45,8 +60,13 @@ public class Test
 		
 		em.persist(cAccount1);
 		em.persist(cAccount2);
-		em.persist(cAccount3);
+		em.persist(cAccount3);*/
 		
+		em.persist(charts);
+		em.persist(accPay);
+		em.persist(accRec);
+		
+				
 		em.getTransaction().commit();
 	}
 		

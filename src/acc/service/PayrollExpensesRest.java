@@ -1,4 +1,4 @@
-package acc.service;
+/*package acc.service;
 
 import java.util.Date;
 import java.util.List;
@@ -39,12 +39,12 @@ public class PayrollExpensesRest {
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	
-	/*public void update(@PathParam("PayrollNumber") long payrollId,@PathParam("Benefits") 
+	public void update(@PathParam("PayrollNumber") long payrollId,@PathParam("Benefits") 
 	String benefits,@PathParam("SalaryRatings")double salaryRatings,@PathParam("WageRatings")double wageRatings,
 	@PathParam("Bonuses") double bonuses,@PathParam("Leaves")String leave,@PathParam("TelephoneExpenses")double telExpenses ,@PathParam("payrolls") List<Employee> payrolExpense){
 	 * 
 	 * 
-	*/
+	
 	//not sure wich 1 works best
 	public void update(@QueryParam("PayrollNumber") long payrollId,@QueryParam("Benefits") 
 	String benefits,@QueryParam("SalaryRatings")double salaryRatings,@QueryParam("WageRatings")double wageRatings,
@@ -137,3 +137,4 @@ public class PayrollExpensesRest {
 	
 
 }
+*/

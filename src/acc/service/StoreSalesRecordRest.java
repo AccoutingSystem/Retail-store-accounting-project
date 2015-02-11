@@ -1,4 +1,4 @@
-package acc.service;
+/*package acc.service;
 
 import java.util.Date;
 import java.util.List;
@@ -39,12 +39,12 @@ public class StoreSalesRecordRest {
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	
-	/*public void update(@PathParam("SalesRecordID") long recordId,Path@Param("SalesAmounts") 
+	public void update(@PathParam("SalesRecordID") long recordId,Path@Param("SalesAmounts") 
 	double deptSalesAmounts,@PathParam("SalesRecordDate")Date salesRecDate ,
     @PathParam("EmployeeID")Employee employee,@PathParam("SalesID")Sales sales){
 	 * 
 	 * *
-	*/
+	
 	
 	//not sure wich 1 works best
 	public void update(@QueryParam("SalesRecordID") long recordId,@QueryParam("SalesAmounts") 
@@ -127,3 +127,4 @@ public class StoreSalesRecordRest {
 	
 
 }
+*/

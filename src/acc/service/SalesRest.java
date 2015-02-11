@@ -1,4 +1,4 @@
-package acc.service;
+/*package acc.service;
 
 
 import java.util.List;
@@ -38,9 +38,9 @@ public class SalesRest {
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	
-	/*public void update(@PathParam("SalesID") long salesId,@PathParam("SalesDepartment") 
+	public void update(@PathParam("SalesID") long salesId,@PathParam("SalesDepartment") 
 	String salesDepartment,@PathParam("sales") List<StoreSalesRecord> storeSales){
-	*/
+	
 	
 	//not sure wich 1 works best
 	public void update(@QueryParam("SalesID") long salesId,@QueryParam("SalesDepartment") 
@@ -145,3 +145,4 @@ public class SalesRest {
 	
 	
 }
+*/

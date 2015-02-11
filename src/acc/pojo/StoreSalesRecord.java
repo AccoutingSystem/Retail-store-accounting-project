@@ -1,4 +1,4 @@
-package acc.pojo;
+/*package acc.pojo;
 
 import java.util.Date;
 
@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/*A bridge table for employee and sales table*/
+A bridge table for employee and sales table
 @XmlRootElement
 @Entity
 @Table(name = "StoreSalesRecord")
@@ -98,3 +98,4 @@ public class StoreSalesRecord
 	
 	
 }
+*/
