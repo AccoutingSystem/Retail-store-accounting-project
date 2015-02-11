@@ -115,7 +115,8 @@ h4.separator, h5.separator, h6.separator {
 }
 
 a, a:hover {
-	color: #cb4040
+	/* color: #cb4040 */
+	color: #4e72c2
 }
 
 .borderB {
