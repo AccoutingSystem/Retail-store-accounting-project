@@ -18,7 +18,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
 
 
-<link rel="stylesheet" href="../assets/components/library/bootstrap/css/bootstrap.min.css" />
+<!--[if lt IE 9]><link rel="stylesheet" href="../assets/components/library/bootstrap/css/bootstrap.min.css" /><![endif]-->
 <link rel="stylesheet"
 	href="../assets/css/admin/module.admin.page.contacts.min.css" />
 
@@ -33,22 +33,6 @@
 	src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v1.2.3"></script>
 <script
 	src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v1.2.3"></script>
-
-	<!-- <link rel="stylesheet"
-	href="../client side template/default/assets/css/admin/module.admin.page.contacts.min.css" />
-
-
-<script src="../client side template/default/assets/components/library/jquery/jquery.min.js?v=v1.2.3"></script>
-<script
-	src="../client side template/default/assets/components/library/jquery/jquery-migrate.min.js?v=v1.2.3"></script>
-<script
-	src="../client side template/default/assets/components/library/modernizr/modernizr.js?v=v1.2.3"></script>
-<script src="../client side template/default/assets/components/plugins/less-js/less.min.js?v=v1.2.3"></script>
-<script
-	src="../client side template/default/assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v1.2.3"></script>
-<script
-	src="../client side template/default/assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v1.2.3"></script> -->
-	
 </head>
 <body class="">
 	
@@ -162,15 +146,6 @@
 							<li><a href="payable_view.html?lang=en&amp;sidebar_style=default">View Payable</a></li>
 							<li><a href="payable_update.html?lang=en&amp;sidebar_style=default">Update Payable</a></li>							
 						</ul></li>
-
-					<li><a href="profile_resume.html?lang=en"><i
-							class="icon-user-1"></i><span>Profile / Resume</span></a></li>
-					<li><a href="pricing_tables.html?lang=en"><i
-							class="  icon-dollar"></i><span>Pricing Tables</span></a></li>
-
-
-					<li><a href="contacts.html?lang=en"><i class="icon-group"></i><span>Contacts</span></a></li>
-
 				</ul>
 			</div>
 			<!-- End of Menu -->
@@ -224,9 +199,9 @@
 								placeholder="Type">
 						</div> -->
 					<div class="col-md-3">
-						<select class="selectpicker col-md-6" data-bind="options: type,value:chosenchartType, optionText:'name'" data-style="btn-default">
-							<!-- <option>Receivable</option>
-							<option>Payable</option> -->
+						<select class="selectpicker col-md-6" data-style="btn-default">
+							<option>Receivable</option>
+							<option>Payable</option>
 						</select>
 					</div>
 				</div>
@@ -234,7 +209,7 @@
 				<!-- Form actions -->
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">					
-						<button type="submit" class="btn btn-primary"><i class="fa fa-check-circle"></i> Save</button>
+						<button type="submit" class="btn btn-info"><i class="fa fa-check-circle"></i> Save</button>
 						<button type="button" class="btn btn-default"><i class="fa fa-times"></i> Cancel</button>
 					</div>
 				</div>
@@ -291,7 +266,7 @@
 	
 	var themerPrimaryColor = primaryColor;
 	</script>
-	
+
 	<script
 		src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v1.2.3"></script>
 	<script
@@ -311,23 +286,5 @@
 	<script src="../jsfiles/lib/jquery/jquery-1.4.2.js"></script>
 	<script src="../jsfiles/lib/knockout/knockout-3.0.0.js"></script>
 	<script src="../jsfiles/scripts/chartAccount/chart.js"></script>
-	
-		
-	
-	<!-- <script
-		src="../client side template/default/assets/components/library/bootstrap/js/bootstrap.min.js?v=v1.2.3"></script>
-	<script
-		src="../client side template/default/assets/components/plugins/nicescroll/jquery.nicescroll.min.js?v=v1.2.3"></script>
-	<script
-		src="../client side template/default/assets/components/plugins/breakpoints/breakpoints.js?v=v1.2.3"></script>
-	<script src="../client side template/default/assets/components/core/js/animations.init.js?v=v1.2.3"></script>
-	<script src="../client side template/default/assets/components/plugins/holder/holder.js?v=v1.2.3"></script>
-	<script
-		src="../client side template/default/assets/components/core/js/sidebar.main.init.js?v=v1.2.3"></script>
-	<script
-		src="../client side template/default/assets/components/core/js/sidebar.collapse.init.js?v=v1.2.3"></script>
-	<script
-		src="../client side template/default/assets/components/helpers/themer/assets/plugins/cookie/jquery.cookie.js?v=v1.2.3"></script>
-	<script src="../client side template/default/assets/components/core/js/core.init.js?v=v1.2.3"></script> -->
 </body>
 </html>

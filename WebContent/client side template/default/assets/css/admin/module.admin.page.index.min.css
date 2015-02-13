@@ -5719,8 +5719,8 @@ body {
 }
 
 .navbar.main.navbar-primary {
-	border-bottom-color: #9e2b2b;
-	background-color: #cb4040
+	border-bottom-color: #466baf;
+	background-color: #466baf
 }
 
 .navbar.main.navbar-primary .appbrand {
@@ -5751,7 +5751,7 @@ body {
 }
 
 .navbar.main.navbar-primary .navbar-brand {
-	border-right: 1px solid #9e2b2b
+	border-right: 1px solid #466baf
 }
 
 @media ( max-width :767px) {
@@ -5765,7 +5765,7 @@ body {
 }
 
 .navbar.main.navbar-primary .toggle-button>i {
-	color: #d97474
+	color: #466baf
 }
 
 .navbar.main.navbar-primary .toggle-button:hover i {
@@ -5773,31 +5773,31 @@ body {
 }
 
 .navbar.main.navbar-primary .navbar-form input {
-	background-color: #9e2b2b;
+	background-color: #466baf;
 	color: #fff
 }
 
 .navbar.main.navbar-primary .navbar-form ::-webkit-input-placeholder {
-	color: #d66868
+	color: #466baf
 }
 
 .navbar.main.navbar-primary .navbar-form :-moz-placeholder {
-	color: #d66868
+	color: #466baf
 }
 
 .navbar.main.navbar-primary .navbar-form ::-moz-placeholder {
-	color: #d66868
+	color: #466baf
 }
 
 .navbar.main.navbar-primary .navbar-form :-ms-input-placeholder {
-	color: #d66868
+	color: #466baf
 }
 
 .navbar.main.navbar-primary .navbar-form .btn {
 	border: none;
-	border-left: 1px solid #9e2b2b;
+	border-left: 1px solid #466baf;
 	color: #fff;
-	border-right: 1px solid #cb4040;
+	border-right: 1px solid #466baf;
 	background: #9e2b2b
 }
 
@@ -5806,7 +5806,7 @@ body {
 }
 
 .navbar.main.navbar-primary .nav .open>a {
-	background-color: #9e2b2b
+	background-color: #466baf
 }
 
 .navbar.main.navbar-primary .nav>li>a:focus {
@@ -5814,20 +5814,20 @@ body {
 }
 
 .navbar.main.navbar-primary .nav>li {
-	border-left-color: #9e2b2b
+	border-left-color: #466baf
 }
 
 .navbar.main.navbar-primary .nav>li>a:hover {
-	background-color: #9e2b2b
+	background-color: #466baf
 }
 
 .navbar.main.navbar-primary .nav>li>a .badge.badge-primary {
 	background-color: #fff;
-	color: #cb4040
+	color: #466baf
 }
 
 .navbar.main.navbar-primary .nav>li.lang {
-	background-color: #9e2b2b
+	background-color: #466baf
 }
 
 .navbar.main.navbar-inverse {
