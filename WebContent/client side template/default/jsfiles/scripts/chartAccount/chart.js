@@ -8,19 +8,17 @@ function createChartList(charts) {
 {
     var self = this;
     self.chartList = ko.observableArray([]);
-    self.type = [{ name: "Payable"},{name: "Receivable"}]; 
+    //self.type = [{ name: 'Payable'},{name: 'Receivable'}];
+    self.type = ['Payable','Receivable'];
     
     self.chartcode = ko.observable();
     self.chartdescription = ko.observable();
     self.chosenchartType = ko.observable();
 
-    
-    
-    var userObject = {
-      
-      chartCode: self.chartcode,
-      chartDescription: self.chartdescription,
-      chartType: self.chosenchartType    
+    var chartObject = {
+    		chartCode: self.chartcode,
+    		chartDescription: self.chartdescription,
+    		chartType: self.chosenchartType    
     }
     
   //saving the account chart
@@ -29,7 +27,7 @@ function createChartList(charts) {
         $.ajax({
             type: "POST",
             url: "http://localhost:8080/AccountingERPSystem/rest/ChartOfAccounts/Save",
-            data: ko.toJSON(userObject),
+            data: ko.toJSON(chartObject),
             contentType: 'application/json',
             dataType: 'json',
             success: function()
@@ -42,6 +40,7 @@ function createChartList(charts) {
             {
                 alert("Error!!Could not add");
                 //empty properties here
+                console.log(ko.toJSON(chartObject));
                 
             }
         });
