@@ -115,8 +115,7 @@ h4.separator, h5.separator, h6.separator {
 }
 
 a, a:hover {
-	/* color: #cb4040 */
-	color: #4e72c2
+	color: #cb4040
 }
 
 .borderB {
@@ -5719,8 +5718,8 @@ body {
 }
 
 .navbar.main.navbar-primary {
-	border-bottom-color: #466baf;
-	background-color: #466baf
+	border-bottom-color: #496D7F;
+	background-color: #cb4040
 }
 
 .navbar.main.navbar-primary .appbrand {
@@ -5751,7 +5750,7 @@ body {
 }
 
 .navbar.main.navbar-primary .navbar-brand {
-	border-right: 1px solid #466baf
+	border-right: 1px solid #496D7F
 }
 
 @media ( max-width :767px) {
@@ -5765,7 +5764,7 @@ body {
 }
 
 .navbar.main.navbar-primary .toggle-button>i {
-	color: #466baf
+	color: #d97474
 }
 
 .navbar.main.navbar-primary .toggle-button:hover i {
@@ -5773,32 +5772,32 @@ body {
 }
 
 .navbar.main.navbar-primary .navbar-form input {
-	background-color: #466baf;
+	background-color: #496D7F;
 	color: #fff
 }
 
 .navbar.main.navbar-primary .navbar-form ::-webkit-input-placeholder {
-	color: #466baf
+	color: #d66868
 }
 
 .navbar.main.navbar-primary .navbar-form :-moz-placeholder {
-	color: #466baf
+	color: #d66868
 }
 
 .navbar.main.navbar-primary .navbar-form ::-moz-placeholder {
-	color: #466baf
+	color: #d66868
 }
 
 .navbar.main.navbar-primary .navbar-form :-ms-input-placeholder {
-	color: #466baf
+	color: #d66868
 }
 
 .navbar.main.navbar-primary .navbar-form .btn {
 	border: none;
-	border-left: 1px solid #466baf;
+	border-left: 1px solid #496D7F;
 	color: #fff;
-	border-right: 1px solid #466baf;
-	background: #9e2b2b
+	border-right: 1px solid #cb4040;
+	background: #496D7F
 }
 
 .navbar.main.navbar-primary .navbar-form .btn:hover {
@@ -5806,7 +5805,7 @@ body {
 }
 
 .navbar.main.navbar-primary .nav .open>a {
-	background-color: #466baf
+	background-color: #496D7F
 }
 
 .navbar.main.navbar-primary .nav>li>a:focus {
@@ -5814,20 +5813,20 @@ body {
 }
 
 .navbar.main.navbar-primary .nav>li {
-	border-left-color: #466baf
+	border-left-color: #496D7F
 }
 
 .navbar.main.navbar-primary .nav>li>a:hover {
-	background-color: #466baf
+	background-color: #496D7F
 }
 
 .navbar.main.navbar-primary .nav>li>a .badge.badge-primary {
 	background-color: #fff;
-	color: #466baf
+	color: #cb4040
 }
 
 .navbar.main.navbar-primary .nav>li.lang {
-	background-color: #466baf
+	background-color: #496D7F
 }
 
 .navbar.main.navbar-inverse {
