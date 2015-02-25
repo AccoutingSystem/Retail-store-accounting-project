@@ -13,54 +13,44 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/jpa/hibernate-entitymanager-4.3.7.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/asm-3.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/commons-beanutils-1.7.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/commons-collections-2.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/commons-digester-1.8.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/commons-io-1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/commons-lang-2.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/datatableswrapper-1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/db2jcc4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/gson-2.2.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jackson-annotations-2.2.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jackson-core-2.2.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jackson-core-asl-1.8.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jackson-core-asl-1.9.7.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jackson-databind-2.0.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jackson-databind-2.2.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jackson-jaxrs-1.8.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jackson-mapper-asl-1.8.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jackson-mapper-asl-1.9.7.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jackson-xc-1.8.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/java-json.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/javassist-3.4.GA.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jaxb-api-2.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jaxb-impl-2.1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jersey-client-1.9.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jersey-core-1.9.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jersey-json-1.9.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jersey-server-1.9.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jersey-servlet-1.18.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jettison-1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/jsr311-api-1.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/mysql-connector-java-5.0.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/mysql-connector-java-5.1.18-bin.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/servlet-api.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/stax-api-1.0-2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/xalan-2.6.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/xml-apis-1.3.02.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/lib/xom-1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/required/antlr-2.7.7.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/required/dom4j-1.6.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/required/hibernate-commons-annotations-4.0.5.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/required/hibernate-core-4.3.7.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/required/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/required/jandex-1.1.0.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/required/javassist-3.18.1-GA.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/required/jboss-logging-3.1.3.GA.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/required/jboss-logging-annotations-1.2.0.Beta1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/required/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New Libraries/lib/persistence-api-1.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/commons-beanutils-1.7.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/commons-collections-2.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/commons-digester-1.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/commons-io-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/datatableswrapper-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/db2jcc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/db2jcc4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/hibernate-commons-annotations-4.0.5.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/hibernate-core-4.3.7.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/hibernate-entitymanager-4.3.7.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jackson-annotations-2.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jackson-core-2.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jackson-core-asl-1.8.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jackson-core-asl-1.9.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jackson-databind-2.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jackson-databind-2.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jackson-jaxrs-1.8.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jackson-mapper-asl-1.8.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jackson-mapper-asl-1.9.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jackson-xc-1.8.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jandex-1.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/java-json.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jboss-logging-3.1.3.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jboss-logging-annotations-1.2.0.Beta1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jersey-client-1.9.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jersey-core-1.9.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jersey-json-1.9.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jersey-server-1.9.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/jersey-servlet-1.18.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/mysql-connector-java-5.1.20-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lionel/Desktop/updated/lib/xml-apis-1.0.b2.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

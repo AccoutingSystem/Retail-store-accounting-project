@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import acc.dao.AccountsPayableDao;
 import acc.pojo.AccountsPayable;
 import acc.pojo.AccountsReceivable;
 import acc.pojo.ChartOfAccounts;
@@ -31,12 +32,17 @@ public class Test
 		
 		
 		ChartOfAccounts charts = new ChartOfAccounts(333,"The detalils of accounts","Payable");
-		AccountsPayable accPay = new AccountsPayable(123,56.30,date,"Rent",charts);
+		ChartOfAccounts charts2 = new ChartOfAccounts(789,"Rent","Payable");
+		AccountsPayable accPay = new AccountsPayable(128,56.30,date,"Rent",charts);
 		AccountsReceivable accRec = new AccountsReceivable(222,96.32,date,"Municipality",charts);
 		
+		/*AccountsPayableDao ds=new AccountsPayableDao();
+		ds.saveAccountsPayables(accPay, charts2.getChartCode());*/
 		/*long chartCode, String chartDescription, String chartType)*/
 		
-		
+		/*ChartOfAccounts c1 = new ChartOfAccounts();
+		c1.setChartCode(789);
+		*/
 
 		
 		
@@ -62,12 +68,13 @@ public class Test
 		em.persist(cAccount2);
 		em.persist(cAccount3);*/
 		
-		em.persist(charts);
-		em.persist(accPay);
-		em.persist(accRec);
-		
-				
-		em.getTransaction().commit();
+//		em.persist(charts);
+//		em.persist(accPay);
+//		em.persist(accRec);
+//		em.persist(c1);
+//		
+//				
+//		em.getTransaction().commit();
 	}
 		
 }

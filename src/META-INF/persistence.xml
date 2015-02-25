@@ -13,8 +13,10 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
  <persistence-unit name="accounting" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
-    <class>acc.pojo.Customer</class>
-    <class>acc.pojo.CustomerAccount</class>
+    <class>acc.pojo.ChartOfAccounts</class>
+    <class>acc.pojo.AccountsPayable</class>
+    <class>acc.pojo.AccountsReceivable</class>
+    
 
     <properties>
         <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/kebo"/>
@@ -22,7 +24,7 @@
         <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
         <property name="hibernate.connection.password" value=""/>
         <property name="hibernate.connection.username" value="root"/>
-        <property name="hibernate.hbm2ddl.auto" value="create"/>
+        <property name="hibernate.hbm2ddl.auto" value="update"/> <!-- use value="create" if we didnt create yet anything in da database -->
         <property name="hibernate.show_sql" value="true"/>
         <!--
         <property name="hibernate.format_sql" value="true"/>

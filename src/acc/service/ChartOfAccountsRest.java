@@ -12,6 +12,11 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import acc.dao.ChartOfAccountsDao;
 import acc.pojo.ChartOfAccounts;
@@ -19,57 +24,83 @@ import acc.pojo.ChartOfAccounts;
 @Path("/ChartOfAccounts")
 public class ChartOfAccountsRest {
 
-  ChartOfAccountsDao dao =null;
- @POST
- @Path("/Save")
- @Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
- public  ChartOfAccounts addChartOfAccounts( ChartOfAccounts accounts){
-  dao = new ChartOfAccountsDao();
-  dao.saveChartOfAccounts(accounts);
-  return accounts;  
- }
- 
- //for updating
- @PUT
- @Path("{Chart_Code}")
- @Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
- @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
- 
- /*public void update(@PathParam("Chart_Code") long accountsId,@PathParam("Chart_Description") 
- String chartDescription,@PathParam("Chart_Type")String chartType ){
- */ 
- 
- //not sure wich 1 works best
- public void update(@QueryParam("Chart_Code") long accountsId,@QueryParam("Chart_Description") 
- String chartDescription,@QueryParam("Chart_Type")String chartType ){
-  
-  dao = new ChartOfAccountsDao();
-  dao.update(accountsId,chartDescription,chartType);
- }
- 
- 
- //for deleting
- 
- @DELETE 
- @Path("{Chart_Code}")
- @Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
- @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
- public void remove(@PathParam("Chart_Code") Long accountId) {
-  dao = new  ChartOfAccountsDao();
-  dao.remove(accountId);
- }
+	ChartOfAccountsDao dao = null;
 
- 
- 
-//for retrieving
- 
-  @GET
-  @Path("/Retrieve")
-  @Produces({ MediaType.APPLICATION_JSON})
-  public List< ChartOfAccounts> findAll() {
-    dao = new  ChartOfAccountsDao();
-   return dao.listChartOfAccounts();
-  }
- 
+	@POST
+	@Path("/Save")
+	// @Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
+	public void addChartOfAccounts(ChartOfAccounts accounts) {
+		
+		dao = new ChartOfAccountsDao();
+		dao.saveChartOfAccounts(accounts);
+	}
+
+	// for updating
+	@PUT
+	@Path("/Update")
+	// @Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+	@Produces(MediaType.TEXT_HTML)
+	public void update(ChartOfAccounts updateChart) {
+
+		dao = new ChartOfAccountsDao();
+		dao.update(updateChart);
+	}
+
+	// for deleting
+
+	@DELETE
+	@Path("{Chart_Code}")
+	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
+	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
+	public void remove(@PathParam("Chart_Code") Long accountId) {
+		
+		dao = new ChartOfAccountsDao();
+		dao.remove(accountId);
+	}
+
+	// search
+	@GET
+	@Path("/Search")
+	@Produces({ MediaType.APPLICATION_JSON })
+	public String searchChart(@QueryParam("key") Long id) throws Exception {
+		
+		dao = new ChartOfAccountsDao();
+		ChartOfAccounts chartAccount = (ChartOfAccounts) dao.search(id);
+
+		JSONObject chart = new JSONObject();
+		chart.put("chartCode", chartAccount.getChartCode());
+		chart.put("chartDescription", chartAccount.getChartDescription());
+		chart.put("chartType", chartAccount.getChartType());
+
+		String str = chart.toString();
+		return str;
+	}
+
+	// for retrieving
+	@GET
+	@Path("/Retrieve")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response findAll() throws JSONException {
+		
+		JSONArray jsonArray = new JSONArray();
+		String converter;
+
+		Response rs = null;
+		dao = new ChartOfAccountsDao();
+		List<ChartOfAccounts> results = dao.listChartOfAccounts();
+
+		for (int i = 0; i < results.size(); i++) {
+			JSONObject chart = new JSONObject();
+			chart.put("chartCode", results.get(i).getChartCode());
+			chart.put("chartDescription", results.get(i).getChartDescription());
+			chart.put("chartType", results.get(i).getChartType());
+
+			jsonArray.put(chart);
+		}
+		
+		converter = jsonArray.toString();
+		return Response.ok(converter).build();
+	}
+
 }

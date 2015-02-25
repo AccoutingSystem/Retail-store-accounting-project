@@ -14,123 +14,133 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 @XmlRootElement
 @Entity
 @Table(name = "tbl_ChartOfAccouts")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ChartOfAccounts {
- 
- @XmlAttribute
- @Id
- @Column(name = "Chart_Code")
- private long chartCode;
- 
- @XmlAttribute
- @Column(name = "Chart_Description")
- private String chartDescription;
- 
- @XmlAttribute
- @Column(name = "Chart_Type")
- private String chartType;
- 
- @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "charts") 
- private List<AccountsPayable> payable;
- 
- @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "charts")
- private List<AccountsReceivable> receivable;
 
- public ChartOfAccounts() {
- 
- }
+	@XmlAttribute
+	@Id
+	@Column(name = "Chart_Code")
+	private long chartCode;
 
-public ChartOfAccounts(long chartCode, String chartDescription, String chartType) {
-	super();
-	this.chartCode = chartCode;
-	this.chartDescription = chartDescription;
-	this.chartType = chartType;
-}
+	@XmlAttribute
+	@Column(name = "Chart_Description")
+	private String chartDescription;
 
-public ChartOfAccounts(long chartCode, String chartDescription,
-		String chartType, List<AccountsPayable> payable,
-		List<AccountsReceivable> receivable) {
-	super();
-	this.chartCode = chartCode;
-	this.chartDescription = chartDescription;
-	this.chartType = chartType;
-	this.payable = payable;
-	this.receivable = receivable;
-}
+	@XmlAttribute
+	@Column(name = "Chart_Type")
+	private String chartType;
 
-/**
- * @return the chartCode
- */
-public long getChartCode() {
-	return chartCode;
-}
+	@JsonIgnore
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "charts")
+	private List<AccountsPayable> payable;
 
-/**
- * @param chartCode the chartCode to set
- */
-public void setChartCode(long chartCode) {
-	this.chartCode = chartCode;
-}
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "charts")
+	private List<AccountsReceivable> receivable;
+	
+	// default constructor
+	public ChartOfAccounts() {
 
-/**
- * @return the chartDescription
- */
-public String getChartDescription() {
-	return chartDescription;
-}
+	}
+	
+	// constructor
+	public ChartOfAccounts(long chartCode, String chartDescription,
+			String chartType) {
+		super();
+		this.chartCode = chartCode;
+		this.chartDescription = chartDescription;
+		this.chartType = chartType;
+	}
 
-/**
- * @param chartDescription the chartDescription to set
- */
-public void setChartDescription(String chartDescription) {
-	this.chartDescription = chartDescription;
-}
+	public ChartOfAccounts(long chartCode, String chartDescription,
+			String chartType, List<AccountsPayable> payable,
+			List<AccountsReceivable> receivable) {
+		super();
+		this.chartCode = chartCode;
+		this.chartDescription = chartDescription;
+		this.chartType = chartType;
+		this.payable = payable;
+		this.receivable = receivable;
+	}
+	
+	// getters & setters
+	/**
+	 * @return the chartCode
+	 */
+	public long getChartCode() {
+		return chartCode;
+	}
 
-/**
- * @return the chartType
- */
-public String getChartType() {
-	return chartType;
-}
+	/**
+	 * @param chartCode
+	 *            the chartCode to set
+	 */
+	public void setChartCode(long chartCode) {
+		this.chartCode = chartCode;
+	}
 
-/**
- * @param chartType the chartType to set
- */
-public void setChartType(String chartType) {
-	this.chartType = chartType;
-}
+	/**
+	 * @return the chartDescription
+	 */
+	public String getChartDescription() {
+		return chartDescription;
+	}
 
-/**
- * @return the payable
- */
-public List<AccountsPayable> getPayable() {
-	return payable;
-}
+	/**
+	 * @param chartDescription
+	 *            the chartDescription to set
+	 */
+	public void setChartDescription(String chartDescription) {
+		this.chartDescription = chartDescription;
+	}
 
-/**
- * @param payable the payable to set
- */
-public void setPayable(List<AccountsPayable> payable) {
-	this.payable = payable;
-}
+	/**
+	 * @return the chartType
+	 */
+	public String getChartType() {
+		return chartType;
+	}
 
-/**
- * @return the receivable
- */
-public List<AccountsReceivable> getReceivable() {
-	return receivable;
-}
+	/**
+	 * @param chartType
+	 *            the chartType to set
+	 */
+	public void setChartType(String chartType) {
+		this.chartType = chartType;
+	}
 
-/**
- * @param receivable the receivable to set
- */
-public void setReceivable(List<AccountsReceivable> receivable) {
-	this.receivable = receivable;
-}
+	/**
+	 * @return the payable
+	 */
+	public List<AccountsPayable> getPayable() {
+		return payable;
+	}
 
+	/**
+	 * @param payable
+	 *            the payable to set
+	 */
+	public void setPayable(List<AccountsPayable> payable) {
+		this.payable = payable;
+	}
 
+	/**
+	 * @return the receivable
+	 */
+	public List<AccountsReceivable> getReceivable() {
+		return receivable;
+	}
+
+	/**
+	 * @param receivable
+	 *            the receivable to set
+	 */
+	public void setReceivable(List<AccountsReceivable> receivable) {
+		this.receivable = receivable;
+	}
 
 }
