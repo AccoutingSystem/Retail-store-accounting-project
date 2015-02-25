@@ -1,0 +1,59 @@
+Version 1.2.3 - 20.01.2014
+- Added: Modal Compose Email
+- Added: Modal Credit Card
+- Improved modals examples and style;
+- Added Forum Section
+	- Forum Overview Page
+	- Forum Post Page
+- Added: Questions & Answers section
+	- Questions Listing
+	- Answers page
+- Added: 4 x Pricing Tables;
+- Improved Support Tickets page; added custom checkboxes;
+- Added: Knowledge Base Page
+- Added: Filterable Portfolio / Video Gallery
+
+Version 1.2.2 - 06.01.2014
+- Added: Events page
+- Added: Contacts page
+- Added: PSD with Layout and Menu
+- Fixed: Photo & Video galleries
+- Improved: Primary Navbar Aesthetics
+
+Version 1.2.0 - 04.01.2014
+- Updated: Collapsible sidebar main menu
+	- New styling (fonts, sizes, icons)
+	- Auto-close active collapsibles when opening another submenu
+	- Removed the sidebar-mini option in favor of fully featured menu with a show/hide toggle (desktop & mobile)
+	- Auto toggle the sidebar menu when viewport size changes (e.g. when you resize the browser to mobile)
+- Updated: Bootstrap v3.0.3
+- Improved: core styles & scripts
+	- rewrite of core.init.js
+	- removed unused resources from core
+	- separated dropdowns styling into it's own LESS file (dropdowns.less)
+	- functionality previously found in core.init.js for the sidebars moved to separate files (e.g. sidebar.main.init.js, sidebar.collapsible.init.js)
+	- LESS styling for the main navbar, previously found only in menus.top.less, separated into multiple LESS files (e.g. menus.navbar.common.less, menus.navbar.default.less, menus.navbar.primary.less, menus.navbar.inverse.less)
+- Added: Support / Tickets page
+- Added: Profile / Resume page
+- Added: Surveys page
+
+Version 1.1.0 - 06.12.2013
+- Added: IE8 Support
+- Added: Invoice page
+- Added: Bookings page
+- Added: Medical Dashboard page
+- Added: Medical Patients page
+- Added: Medical Appointments page
+- Added: Medical Memos page
+- Added: Medical Metrics page
+- Added: Edit account page
+- Added: Online Shop Products List page
+- Added: Online Shop Edit Product page
+- Added: Dropdowns & Badges to content tabs (eg. on Dashboard navigation - Inbox, Financial, Account, etc);
+- Fixed: Alerts scroll visibility on Dashboard from browsers on Windows
+- Fixed: Top navbar style issues (hovers, spacings, text color)
+- Fixed: WYSIHTML5 modals (insert link & insert image)
+- Improved: Overall aesthetics (Adjusted spacings, widgets, default dark sidebar, default primary topnav, default wide sidebar with an icons only option / sidebar toggle)
+
+Version 1.0.0 - 02.12.2013
+- Initial Release
